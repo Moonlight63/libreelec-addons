@@ -1,24 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="docker.moonlight.sonarr"
-       name="Sonarr (Moonlight's Mod)"
-       version="1.0.7"
-       provider-name="Based on LinuxServer.io">
+<addon id="docker.linuxserver.sonarr"
+       name="Sonarr (LinuxServer.io)"
+       version="1.0.4"
+       provider-name="LinuxServer.io">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
     <import addon="service.system.docker" version="0.0.0" />
-    <import addon="script.kiosk.browser" version="0.0.0" />
   </requires>
   <extension point="xbmc.service" library="default.py">
     <provides></provides>
   </extension>
-  <extension point="xbmc.python.script" library="viewer.py">
-    <provides>executable</provides>
-  </extension>
   <extension point="xbmc.addon.metadata">
     <summary>Sonarr in a docker container</summary>
     <description>
-Moonlight's fork of linuxserver's sonarr package.
-
 Sonarr (formerly NZBdrone) is a PVR for usenet and bittorrent users. It can monitor multiple RSS feeds for new episodes of your favorite shows and will grab, sort and rename them.
 
 This is a docker container brought to you by the LinuxServer.io team.
@@ -27,13 +21,8 @@ Please visit https://linuxserver.io for more information.
     <disclaimer>
     </disclaimer>
     <news>
-docker.moonlight.sonarr:
+docker.linuxserver.sonarr:
 --------------------------
-1.0.6
-- Python version bump
-
-1.0.5
-- Changed package name to fix conflict
 
 1.0.4
 - Fix timezone bug

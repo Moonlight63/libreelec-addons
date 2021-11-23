@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addons>
+<addon id="docker.linuxserver.transmission"
+       name="Transmission (LinuxServer.io)"
+       version="1.0.2"
+       provider-name="LinuxServer.io">
+  <requires>
+    <import addon="os.libreelec.tv" version="7.0"/>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="service.system.docker" version="0.0.0" />
+  </requires>
+  <extension point="xbmc.service" library="default.py">
+    <provides></provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Transmission in a docker container</summary>
+    <description>
+Transmission is designed for easy, powerful use. Transmission has the features you want from a BitTorrent client: encryption, a web interface, peer exchange, magnet links, DHT, µTP, UPnP and NAT-PMP port forwarding, webseed support, watch directories, tracker editing, global and per-torrent speed limits, and more.
+
+This is a docker container brought to you by the LinuxServer.io team.
+Please visit https://linuxserver.io for more information.
+    </description>
+    <news>
+docker.linuxserver.transmission:
+--------------------------------
+
+1.0.2
+- Fix timezone bug
+
+1.0.1
+- Added aarch64 support
+
+1.0.0
+- Initial release
+    </news>
+    <disclaimer>
+    </disclaimer>
+    <platform>all</platform>
+    <website>http://linuxserver.io/</website>
+    <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="docker.linuxserver.radarr"
+       name="Radarr (LinuxServer.io)"
+       version="1.0.0"
+       provider-name="LinuxServer.io">
+  <requires>
+    <import addon="os.libreelec.tv" version="7.0"/>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="service.system.docker" version="0.0.0" />
+  </requires>
+  <extension point="xbmc.service" library="default.py">
+    <provides></provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Radarr in a docker container</summary>
+    <description>
+A fork of Sonarr to work with movies à la Couchpotato.
+
+This is a docker container brought to you by the LinuxServer.io team.
+Please visit https://linuxserver.io for more information.
+    </description>
+    <disclaimer>
+    </disclaimer>
+    <news>
+docker.linuxserver.radarr:
+--------------------------
+
+1.0.0
+-Initial release
+    </news>
+    <platform>all</platform>
+    <website>http://linuxserver.io/</website>
+    <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
+<addon
+  id="repository.moonlight.docker.addons"
+  name="Moonlight's PVRBox Add-ons"
+  version="1.0.0"
+  provider-name="Moonlight, Based on linuxserver.io">
+  <requires>
+    <import addon="xbmc.addon"
+            version="16.0.0"/>
+  </requires>
+  <extension point="xbmc.addon.repository"
+             name="Moonlight's custom PVRBox addons">
+    <info compressed="true">https://raw.githubusercontent.com/Moonlight63/libreelec-addons/master/addons.xml</info>
+    <checksum>https://raw.githubusercontent.com/Moonlight63/libreelec-addons/master/addons.xml.md5</checksum>
+    <datadir zip="true">https://raw.githubusercontent.com/Moonlight63/libreelec-addons/master/download</datadir>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>A custom fork of LinuxServer.io's docker repository, plus some additional addons</summary>
+    <description>
+Download and install docker container add-ons from the LinuxServer.io repository. This is the extended repo.
+
+Please visit https://linuxserver.io for more information.
+    </description>
+    <disclaimer> </disclaimer>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="docker.linuxserver.sonarr"
+       name="Sonarr (LinuxServer.io)"
+       version="1.0.4"
+       provider-name="LinuxServer.io">
+  <requires>
+    <import addon="os.libreelec.tv" version="7.0"/>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="service.system.docker" version="0.0.0" />
+    <import addon="script.kiosk.browser" version="0.0.0" />
+  </requires>
+  <extension point="xbmc.python.script" library="viewer.py">
+    <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.service" library="default.py">
+    <provides></provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Sonarr in a docker container</summary>
+    <description>
+Sonarr (formerly NZBdrone) is a PVR for usenet and bittorrent users. It can monitor multiple RSS feeds for new episodes of your favorite shows and will grab, sort and rename them.
+
+This is a docker container brought to you by the LinuxServer.io team.
+Please visit https://linuxserver.io for more information.
+    </description>
+    <disclaimer>
+    </disclaimer>
+    <news>
+docker.linuxserver.sonarr:
+--------------------------
+
+1.0.4
+- Fix timezone bug
+
+1.0.3
+- Added aarch64 support
+
+1.0.2
+- Run as user nobody
+
+1.0.1
+- Unified addon for x86_64 and arm
+
+1.0.0
+-Initial release
+    </news>
+    <platform>all</platform>
+    <website>http://linuxserver.io/</website>
+    <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="script.kiosk.browser"
+      name="Kiosk Window"
+      version="1.0"
+      provider-name="Based on Team LibreELEC">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+  </requires>
+  <extension point="xbmc.python.script" library="default.py">
+    <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Kiosk Window</summary>
+    <description>
+Opens a webpage in full screen with no decoration or notification windows, plus a custom extention to force close when pressing the HomePage button on a remote. Based on the Google Chrome Launcher from LibreELEC.
+    </description>
+    <disclaimer>
+
+    </disclaimer>
+    <platform>all</platform>
+    <news>
+100
+- initial release
+    </news>
+    <assets>
+      <icon>resources/icon.png</icon>
+      <fanart>resources/fanart.png</fanart>
+
+    </assets>
+  </extension>
+</addon>
+</addons>

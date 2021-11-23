@@ -4,7 +4,7 @@
        version="1.0.5"
        provider-name="Based on LinuxServer.io">
   <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="xbmc.python" version="3.0.0"/>
     <import addon="service.system.docker" version="0.0.0" />
     <import addon="script.kiosk.browser" version="0.0.0" />
   </requires>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="docker.moonlight.sonarr"
        name="Sonarr (Moonlight's Mod)"
-       version="1.0.6"
+       version="1.0.7"
        provider-name="Based on LinuxServer.io">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>

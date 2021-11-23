@@ -2,7 +2,7 @@
 <addons>
 <addon id="kiosk.moonlight.sonarrviewer"
        name="Sonarr"
-       version="1.0.0"
+       version="1.0.1"
        provider-name="Moonlight">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
@@ -26,7 +26,7 @@ Open Sonarr in a kiosk window.
     <platform>all</platform>
     <assets>
         <icon>icon.png</icon>
-        <fanart>fanart.jpg</fanart>
+        <fanart>fanart.png</fanart>
     </assets>
   </extension>
 </addon>

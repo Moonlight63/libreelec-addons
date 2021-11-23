@@ -1,0 +1,11 @@
+#!/bin/sh
+
+
+rm ./addons.xml
+rm ./addons.xml.md5
+
+rm -rf ./download/*
+
+python addons_xml_generator3.py
+
+git add .

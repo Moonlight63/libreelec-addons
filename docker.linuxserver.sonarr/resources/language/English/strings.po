@@ -24,3 +24,7 @@ msgstr ""
 msgctxt "#30008"
 msgid "Listening port for web gui"
 msgstr ""
+
+msgctxt "#30009"
+msgid "Default Homepage"
+msgstr ""

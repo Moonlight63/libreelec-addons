@@ -83,7 +83,7 @@ docker.linuxserver.radarr:
 <addon
   id="repository.moonlight.docker.addons"
   name="Moonlight's PVRBox Add-ons"
-  version="1.0.1"
+  version="1.0.2"
   provider-name="Moonlight, Based on linuxserver.io">
   <requires>
     <import addon="xbmc.addon" version="16.0.0"/>
@@ -139,7 +139,7 @@ Opens a webpage in full screen with no decoration or notification windows, plus 
 
 <addon id="docker.moonlight.sonarr"
        name="Sonarr (Moonlight's Mod)"
-       version="1.0.5"
+       version="1.0.6"
        provider-name="Based on LinuxServer.io">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
@@ -167,6 +167,9 @@ Please visit https://linuxserver.io for more information.
     <news>
 docker.moonlight.sonarr:
 --------------------------
+1.0.6
+- Python version bump
+
 1.0.5
 - Changed package name to fix conflict
 

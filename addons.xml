@@ -1,36 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
-<addon id="kiosk.moonlight.sonarrviewer"
-       name="Sonarr"
-       version="1.0.1"
-       provider-name="Moonlight">
-  <requires>
-    <import addon="xbmc.python" version="3.0.0"/>
-    <import addon="docker.linuxserver.sonarr" version="0.0.0" />
-    <import addon="script.kiosk.browser" version="0.0.0" />
-  </requires>
-  <extension point="xbmc.python.script" library="viewer.py">
-    <provides>executable</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary>Sonarr viewer</summary>
-    <description>
-Open Sonarr in a kiosk window.
-    </description>
-    <disclaimer>
-    </disclaimer>
-    <news>
-1.0.0
--Initial release
-    </news>
-    <platform>all</platform>
-    <assets>
-        <icon>icon.png</icon>
-        <fanart>fanart.png</fanart>
-    </assets>
-  </extension>
-</addon>
-
 <addon id="docker.linuxserver.transmission"
        name="Transmission (LinuxServer.io)"
        version="1.0.2"
@@ -213,6 +182,37 @@ Opens a webpage in full screen with no decoration or notification windows, plus 
       <icon>resources/icon.png</icon>
       <fanart>resources/fanart.png</fanart>
 
+    </assets>
+  </extension>
+</addon>
+
+<addon id="script.moonlight.sonarrviewer"
+       name="Sonarr"
+       version="1.0.1"
+       provider-name="Moonlight">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+    <import addon="docker.linuxserver.sonarr" version="0.0.0" />
+    <import addon="script.kiosk.browser" version="0.0.0" />
+  </requires>
+  <extension point="xbmc.python.script" library="viewer.py">
+    <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Sonarr viewer</summary>
+    <description>
+Open Sonarr in a kiosk window.
+    </description>
+    <disclaimer>
+    </disclaimer>
+    <news>
+1.0.0
+-Initial release
+    </news>
+    <platform>all</platform>
+    <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.png</fanart>
     </assets>
   </extension>
 </addon>

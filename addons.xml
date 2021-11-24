@@ -347,7 +347,7 @@ Open Prowlarr in a kiosk window.
 
 <addon id="script.moonlight.kiosk.browser"
       name="Kiosk Window"
-      version="1.0"
+      version="1.0.1"
       provider-name="Based on Team LibreELEC">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.moonlight.kiosk.browser"
+      name="Kiosk Window"
+      version="1.0"
+      provider-name="Based on Team LibreELEC">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+  </requires>
+  <extension point="xbmc.python.script" library="default.py">
+    <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Kiosk Window</summary>
+    <description>
+Opens a webpage in full screen with no decoration or notification windows, plus a custom extention to force close when pressing the HomePage button on a remote. Based on the Google Chrome Launcher from LibreELEC.
+    </description>
+    <disclaimer>
+
+    </disclaimer>
+    <platform>all</platform>
+    <news>
+100
+- initial release
+    </news>
+    <assets>
+      <icon>resources/icon.png</icon>
+      <fanart>resources/fanart.png</fanart>
+
+    </assets>
+  </extension>
+</addon>

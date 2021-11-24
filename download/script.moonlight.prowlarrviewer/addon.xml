@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.moonlight.prowlarrviewer"
+       name="Prowlarr"
+       version="1.0.0"
+       provider-name="Moonlight">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+    <import addon="docker.linuxserver.prowlarr" version="0.0.0" />
+    <import addon="script.moonlight.kiosk.browser" version="0.0.0" />
+  </requires>
+  <extension point="xbmc.python.script" library="viewer.py">
+    <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Prowlarr viewer</summary>
+    <description>
+Open Prowlarr in a kiosk window.
+    </description>
+    <disclaimer>
+    </disclaimer>
+    <news>
+1.0.0
+-Initial release
+    </news>
+    <platform>all</platform>
+    <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.png</fanart>
+    </assets>
+  </extension>
+</addon>

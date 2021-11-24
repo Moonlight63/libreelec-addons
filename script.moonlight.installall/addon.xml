@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.moonlight.installall"
+       name="Install All"
+       version="1.0.0"
+       provider-name="Moonlight">
+  <requires>  
+    <import addon="xbmc.python" version="3.0.0"/>
+    <import addon="script.moonlight.kiosk.browser" version="0.0.0" />
+    <import addon="script.moonlight.bazarrviewer" version="0.0.0" />
+    <import addon="script.moonlight.overseerrviewer" version="0.0.0" />
+    <import addon="script.moonlight.prowlarrviewer" version="0.0.0" />
+    <import addon="script.moonlight.radarrviewer" version="0.0.0" />
+    <import addon="script.moonlight.sonarrviewer" version="0.0.0" />
+    <import addon="script.moonlight.transmissionview" version="0.0.0" />
+  </requires>
+  <extension point="xbmc.python.script" library="viewer.py">
+    <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Install all addons</summary>
+    <description>
+    </description>
+    <disclaimer>
+    </disclaimer>
+    <news>
+    </news>
+    <platform></platform>
+    <assets>
+    </assets>
+  </extension>
+</addon>

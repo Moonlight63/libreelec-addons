@@ -8,6 +8,6 @@ import xbmc
 __addon__ = xbmcaddon.Addon();
 
 xbmc.log('Launching Viewer: ' + __addon__.getSetting('HOMEPAGE'))
-xbmc.executebuiltin('RunAddon("script.kiosk.browser", ' + __addon__.getSetting('HOMEPAGE') + ')')
+xbmc.executebuiltin('RunAddon("script.moonlight.kiosk.browser", ' + __addon__.getSetting('HOMEPAGE') + ')')
 
 del __addon__

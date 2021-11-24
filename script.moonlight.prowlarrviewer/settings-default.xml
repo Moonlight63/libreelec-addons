@@ -1,0 +1,3 @@
+<settings>
+    <setting id="HOMEPAGE" default="true">http://localhost:9696</setting>
+</settings>

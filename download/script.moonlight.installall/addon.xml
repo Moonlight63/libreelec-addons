@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="script.moonlight.installall"
        name="Install All"
-       version="1.0.0"
+       version="1.0.1"
        provider-name="Moonlight">
   <requires>  
     <import addon="xbmc.python" version="3.0.0"/>
@@ -14,12 +14,12 @@
     <import addon="script.moonlight.transmissionview" version="0.0.0" />
     <import addon="docker.linuxserver.plex" version="0.0.0" />
 
-    <!-- <import addon="skin.embuary-matrix" version="0.0.0" /> -->
-    <!-- <import addon="script.transmission" version="0.0.0" /> -->
+    <import addon="skin.embuary-matrix" version="0.0.0" />
+    <import addon="script.transmission" version="0.0.0" />
   </requires>
-  <!-- <extension point="xbmc.python.script" library="viewer.py">
+  <extension point="xbmc.python.script" library="viewer.py">
     <provides>executable</provides>
-  </extension> -->
+  </extension>
   <extension point="xbmc.addon.metadata">
     <summary>Install all addons</summary>
     <description>

@@ -4,7 +4,7 @@
 # Copyright (C) 2018-present Team LibreELEC (https://libreelec.tv)
 
 . /etc/profile
-oe_setup_addon overseerr.window
+oe_setup_addon script.moonlight.kiosk.browser
 
 touch $ADDON_DIR/output.log
 

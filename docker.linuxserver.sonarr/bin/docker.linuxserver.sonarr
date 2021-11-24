@@ -33,5 +33,5 @@ docker run --name="$name" \
            -v "$V_config":/config \
            -v "$V_tv":/tv \
            -v "$V_downloads":/downloads \
-           -p "$P_port":8989 \
+           --net=host \
            "$DOCKERIMAGE":latest

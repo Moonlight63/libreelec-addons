@@ -33,7 +33,5 @@ docker run --name="$name" \
            -v "$V_config":/config \
            -v "$V_downloads":/downloads \
            -v "$V_watch":/watch \
-           -p "$P_port":9091 \
-           -p "$P_port2":51413 \
-           -p "$P_port2":51413/udp \
+           --net=host \
            "$DOCKERIMAGE":latest

@@ -31,5 +31,5 @@ docker run --name="$name" \
            -e PGID="100" \
            -e TZ="$TIMEZONE" \
            -v "$V_config":/config \
-           -p "$P_port":5055 \
+           --net=host \
            "$DOCKERIMAGE":latest

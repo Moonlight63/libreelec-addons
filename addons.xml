@@ -2,7 +2,7 @@
 <addons>
 <addon id="docker.linuxserver.prowlarr"
        name="Prowlarr (LinuxServer.io)"
-       version="1.0.0"
+       version="1.0.1"
        provider-name="Moonlight, Based on LinuxServer.io">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
@@ -64,7 +64,7 @@ Open Bazarr in a kiosk window.
 
 <addon id="docker.linuxserver.transmission"
        name="Transmission (LinuxServer.io)"
-       version="1.0.2"
+       version="1.0.3"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
@@ -138,7 +138,7 @@ Open Radarr in a kiosk window.
 
 <addon id="docker.linuxserver.radarr"
        name="Radarr (LinuxServer.io)"
-       version="1.0.0"
+       version="1.0.1"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
@@ -201,7 +201,7 @@ Please visit https://linuxserver.io for more information.
 
 <addon id="docker.linuxserver.sonarr"
        name="Sonarr (LinuxServer.io)"
-       version="1.0.4"
+       version="1.0.5"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
@@ -250,7 +250,7 @@ docker.linuxserver.sonarr:
 
 <addon id="docker.linuxserver.bazarr"
        name="Bazarr (LinuxServer.io)"
-       version="1.0.0"
+       version="1.0.1"
        provider-name="Moonlight, Based on LinuxServer.io">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
@@ -378,7 +378,7 @@ Opens a webpage in full screen with no decoration or notification windows, plus 
 
 <addon id="docker.linuxserver.overseerr"
        name="OverSeerr (LinuxServer.io)"
-       version="1.0.0"
+       version="1.0.1"
        provider-name="Moonlight, Based on LinuxServer.io">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
@@ -446,7 +446,7 @@ docker.linuxserver.overseerr:
 
 <addon id="docker.linuxserver.plex"
        name="Plex (LinuxServer.io)"
-       version="2.0.2"
+       version="2.0.3"
        provider-name="LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />

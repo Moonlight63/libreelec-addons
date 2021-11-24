@@ -32,4 +32,4 @@ docker run --name="$name" \
            -e TZ="$TIMEZONE" \
            -v "$V_config":/config \
            --net=host \
-           "$DOCKERIMAGE":latest
+           "$DOCKERIMAGE":develop

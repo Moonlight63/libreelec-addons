@@ -2,7 +2,7 @@
 <addons>
 <addon id="docker.linuxserver.prowlarr"
        name="Prowlarr (LinuxServer.io)"
-       version="1.0.1"
+       version="1.0.2"
        provider-name="Moonlight, Based on LinuxServer.io">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>

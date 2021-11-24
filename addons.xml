@@ -176,7 +176,7 @@ docker.linuxserver.radarr:
 <addon
   id="repository.moonlight.docker.addons"
   name="Moonlight's PVRBox Add-ons"
-  version="1.0.4"
+  version="1.0.5"
   provider-name="Moonlight, Based on linuxserver.io">
   <requires>
     <import addon="xbmc.addon" version="16.0.0"/>

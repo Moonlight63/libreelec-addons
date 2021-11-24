@@ -1,6 +1,6 @@
 <settings>
     <setting id="V_config" value="/storage/.kodi/userdata/addon_data/docker.linuxserver.bazarr/config" />
-    <setting id="V_movies" value="/storage/videos" />
+    <setting id="V_movies" value="/storage/movies" />
     <setting id="V_tv" value="/storage/tvshows" />
     <setting id="P_port" value="6767" />
 </settings>

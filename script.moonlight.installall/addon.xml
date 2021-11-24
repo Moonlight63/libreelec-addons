@@ -12,10 +12,13 @@
     <import addon="script.moonlight.radarrviewer" version="0.0.0" />
     <import addon="script.moonlight.sonarrviewer" version="0.0.0" />
     <import addon="script.moonlight.transmissionview" version="0.0.0" />
+
+    <import addon="skin.embuary-matrix" version="0.0.0" />
+    <import addon="script.transmission" version="0.0.0" />
   </requires>
-  <extension point="xbmc.python.script" library="viewer.py">
+  <!-- <extension point="xbmc.python.script" library="viewer.py">
     <provides>executable</provides>
-  </extension>
+  </extension> -->
   <extension point="xbmc.addon.metadata">
     <summary>Install all addons</summary>
     <description>

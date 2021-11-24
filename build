@@ -9,3 +9,5 @@ rm -rf ./download/*
 python addons_xml_generator3.py
 
 git add .
+git commit -am "automatic commit"
+git push

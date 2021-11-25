@@ -1,0 +1,12 @@
+[Unit]
+Description=%p container
+Requires=service.system.docker.service
+After=service.system.docker.service
+
+[Service]
+ExecStart=/bin/sh /storage/.kodi/addons/%p/bin/docker.moonlight.htpc start
+ExecStop=/bin/sh /storage/.kodi/addons/%p/bin/docker.moonlight.htpc stop
+ExecReload=/bin/sh /storage/.kodi/addons/%p/bin/docker.moonlight.htpc reload
+
+[Install]
+WantedBy=multi-user.target

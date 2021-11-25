@@ -5,12 +5,7 @@ After=service.system.docker.service
 
 [Service]
 Type=oneshot
-Restart=always
-RestartSec=10s
-RemainAfterExit=1
-StartLimitInterval=86400
-StartLimitBurst=3
-TimeoutStartSec=0
+RemainAfterExit=true
 ExecStart=/bin/sh /storage/.kodi/addons/%p/bin/docker.moonlight.htpc-start
 ExecStop=/bin/sh /storage/.kodi/addons/%p/bin/docker.moonlight.htpc-stop
 

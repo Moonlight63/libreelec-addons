@@ -176,7 +176,7 @@ docker.linuxserver.radarr:
 <addon
   id="repository.moonlight.docker.addons"
   name="Moonlight's PVRBox Add-ons"
-  version="1.0.9"
+  version="1.1.1"
   provider-name="Moonlight, Based on linuxserver.io">
   <requires>
     <import addon="xbmc.addon" version="16.0.0"/>
@@ -372,6 +372,45 @@ Opens a webpage in full screen with no decoration or notification windows, plus 
       <icon>resources/icon.png</icon>
       <fanart>resources/fanart.png</fanart>
 
+    </assets>
+  </extension>
+</addon>
+
+<addon id="docker.moonlight.htpc"
+       name="HTPC (LinuxServer.io)"
+       version="1.0.0"
+       provider-name="Moonlight and LinuxServer.io">
+  <requires>
+    <import addon="service.system.docker" version="0.0.0" />
+  </requires>
+  <extension point="xbmc.service" library="default.py">
+    <provides></provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Moonlight's HTPC PVR Docker stack</summary>
+    <description>
+A self hosted full stack of docker containers to build a self contained PVR system.
+
+- Transmission
+- Prowlarr
+- Sonarr
+- Radarr
+- Bazarr
+- OverSeerr
+- Plex
+
+Combine with PlexKodiConnect and Embuary skin for a unified experience.
+
+    </description>
+    <disclaimer>
+    </disclaimer>
+    <news>
+    </news>
+    <platform>all</platform>
+    <website>http://linuxserver.io/</website>
+    <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.jpg</fanart>
     </assets>
   </extension>
 </addon>

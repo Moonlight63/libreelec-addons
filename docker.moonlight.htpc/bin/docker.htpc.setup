@@ -1,0 +1,62 @@
+#!/bin/sh
+
+servicename="docker.moonlight.htpc"
+. /etc/profile
+
+if [ -f /storage/.cache/timezone ]; then
+ . /storage/.cache/timezone
+else
+ TIMEZONE="America/Los_Angeles"
+fi
+
+oe_setup_addon "$servicename"
+
+#set uid/gid
+if [ "$E_manual_uid" = "false" ]; then
+  E_PUID="65534"
+  E_PGID="100"
+fi
+
+mkdir -p "${V_data}/configs/plex" \
+"${V_data}/configs/radarr" \
+"${V_data}/configs/sonarr" \
+"${V_data}/configs/bazarr" \
+"${V_data}/configs/prowlarr" \
+"${V_data}/configs/overseerr" \
+"${V_data}/configs/transmission" \
+"${V_data}/media/tvshows" \
+"${V_data}/media/movies" \
+"${V_data}/media/photos" \
+"${V_data}/media/videos" \
+"${V_data}/media/music" \
+"${V_data}/downloads/plextranscode" \
+"${V_data}/downloads/transmission" \
+"${V_data}/downloads/transmission/watch"
+
+for i in "${V_data}/configs/plex" \
+"${V_data}/configs/radarr" \
+"${V_data}/configs/sonarr" \
+"${V_data}/configs/bazarr" \
+"${V_data}/configs/prowlarr" \
+"${V_data}/configs/overseerr" \
+"${V_data}/configs/transmission" \
+"${V_data}/media/tvshows" \
+"${V_data}/media/movies" \
+"${V_data}/media/photos" \
+"${V_data}/media/videos" \
+"${V_data}/media/music" \
+"${V_data}/downloads/plextranscode" \
+"${V_data}/downloads/transmission" \
+"${V_data}/downloads/transmission/watch"; do
+
+  if [ ! "$(ls -nd $i | awk '{print $3}')" = "$E_PUID" ]; then
+    echo "attempting chown ${E_PUID}/${E_PGID} on $i"
+    chown -R "${E_PUID}":"${E_PGID}" "$i" 2>&1 >/dev/null
+    echo "chown attempt completed, moving on"
+  else
+    echo "skipping chown, make sure the folder $i is accessible by the user ${E_PUID}:${E_PGID}"
+  fi
+  
+done
+
+docker network create --driver bridge htpc || true

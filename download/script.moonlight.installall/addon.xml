@@ -12,7 +12,6 @@
     <import addon="script.moonlight.radarrviewer" version="0.0.0" />
     <import addon="script.moonlight.sonarrviewer" version="0.0.0" />
     <import addon="script.moonlight.transmissionview" version="0.0.0" />
-    <import addon="docker.linuxserver.plex" version="0.0.0" />
 
     <!-- <import addon="skin.embuary-matrix" version="0.0.0" /> -->
     <!-- <import addon="script.transmission" version="0.0.0" /> -->

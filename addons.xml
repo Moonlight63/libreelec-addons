@@ -39,7 +39,6 @@ docker.linuxserver.prowlarr:
        provider-name="Moonlight">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
-    <import addon="docker.linuxserver.bazarr" version="0.0.0" />
     <import addon="script.moonlight.kiosk.browser" version="0.0.0" />
   </requires>
   <extension point="xbmc.python.script" library="viewer.py">
@@ -111,7 +110,6 @@ docker.linuxserver.transmission:
        provider-name="Moonlight">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
-    <import addon="docker.linuxserver.radarr" version="0.0.0" />
     <import addon="script.moonlight.kiosk.browser" version="0.0.0" />
   </requires>
   <extension point="xbmc.python.script" library="viewer.py">
@@ -289,7 +287,6 @@ docker.linuxserver.bazarr:
        provider-name="Moonlight">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
-    <import addon="docker.linuxserver.transmission" version="0.0.0" />
     <import addon="script.moonlight.kiosk.browser" version="0.0.0" />
   </requires>
   <extension point="xbmc.python.script" library="viewer.py">
@@ -320,7 +317,6 @@ Open Transmission in a kiosk window.
        provider-name="Moonlight">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
-    <import addon="docker.linuxserver.prowlarr" version="0.0.0" />
     <import addon="script.moonlight.kiosk.browser" version="0.0.0" />
   </requires>
   <extension point="xbmc.python.script" library="viewer.py">
@@ -461,7 +457,6 @@ docker.linuxserver.overseerr:
     <import addon="script.moonlight.radarrviewer" version="0.0.0" />
     <import addon="script.moonlight.sonarrviewer" version="0.0.0" />
     <import addon="script.moonlight.transmissionview" version="0.0.0" />
-    <import addon="docker.linuxserver.plex" version="0.0.0" />
 
     <!-- <import addon="skin.embuary-matrix" version="0.0.0" /> -->
     <!-- <import addon="script.transmission" version="0.0.0" /> -->
@@ -565,7 +560,6 @@ docker.linuxserver.plex:
        provider-name="Moonlight">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
-    <import addon="docker.linuxserver.sonarr" version="0.0.0" />
     <import addon="script.moonlight.kiosk.browser" version="0.0.0" />
   </requires>
   <extension point="xbmc.python.script" library="viewer.py">
@@ -596,7 +590,6 @@ Open Sonarr in a kiosk window.
        provider-name="Moonlight">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
-    <import addon="docker.linuxserver.overseerr" version="0.0.0" />
     <import addon="script.moonlight.kiosk.browser" version="0.0.0" />
   </requires>
   <extension point="xbmc.python.script" library="viewer.py">

@@ -5,7 +5,6 @@
        provider-name="Moonlight">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
-    <import addon="docker.linuxserver.overseerr" version="0.0.0" />
     <import addon="script.moonlight.kiosk.browser" version="0.0.0" />
   </requires>
   <extension point="xbmc.python.script" library="viewer.py">

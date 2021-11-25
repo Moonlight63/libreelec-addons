@@ -11,13 +11,7 @@ class Monitor(xbmc.Monitor):
       self.id = xbmcaddon.Addon().getAddonInfo('id')
 
    def onSettingsChanged(self):
-      subprocess.call(['systemctl', 'restart', 'docker.linuxserver.bazarr.service'])
-      subprocess.call(['systemctl', 'restart', 'docker.linuxserver.overseerr.service'])
-      subprocess.call(['systemctl', 'restart', 'docker.linuxserver.plex.service'])
-      subprocess.call(['systemctl', 'restart', 'docker.linuxserver.prowlarr.service'])
-      subprocess.call(['systemctl', 'restart', 'docker.linuxserver.radarr.service'])
-      subprocess.call(['systemctl', 'restart', 'docker.linuxserver.sonarr.service'])
-      subprocess.call(['systemctl', 'restart', 'docker.linuxserver.transmission.service'])
+      subprocess.call(['systemctl', 'restart', self.id])
 
 
 if __name__ == '__main__':

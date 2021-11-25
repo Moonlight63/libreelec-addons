@@ -59,4 +59,4 @@ for i in "${V_data}/configs/plex" \
 
 done
 
-docker network create --driver bridge htpc || true
+# docker network create --driver bridge htpc || true

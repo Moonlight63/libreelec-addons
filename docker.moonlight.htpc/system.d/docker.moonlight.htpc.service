@@ -6,8 +6,8 @@ After=service.system.docker.service
 [Service]
 Type=oneshot
 RemainAfterExit=true
-ExecStart=/bin/sh /storage/.kodi/addons/%p/bin/docker.moonlight.htpc-start
-ExecStop=/bin/sh /storage/.kodi/addons/%p/bin/docker.moonlight.htpc-stop
+ExecStart=/bin/sh /storage/.kodi/addons/docker.moonlight.htpc/bin/docker.moonlight.htpc-start
+ExecStop=/bin/sh /storage/.kodi/addons/docker.moonlight.htpc/bin/docker.moonlight.htpc-stop
 
 [Install]
 WantedBy=multi-user.target

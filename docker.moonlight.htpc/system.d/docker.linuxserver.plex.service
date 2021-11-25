@@ -11,7 +11,7 @@ RestartSec=10s
 StartLimitInterval=86400
 StartLimitBurst=3
 TimeoutStartSec=0
-ExecStart=/bin/sh /storage/.kodi/addons/%p/bin/docker.linuxserver.plex
+ExecStart=/bin/sh /storage/.kodi/addons/docker.moonlight.htpc/bin/docker.linuxserver.plex
 ExecStop=/bin/sh docker stop plex
 
 [Install]

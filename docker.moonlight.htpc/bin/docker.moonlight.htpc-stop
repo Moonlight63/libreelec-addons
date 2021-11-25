@@ -5,6 +5,9 @@ oe_setup_addon docker.moonlight.htpc
 
 echo $ADDON_DIR
 
+echo "Removing Network"
+docker network rm htpc
+
 systemctl stop "docker.linuxserver.plex.service"
 systemctl stop "docker.linuxserver.bazarr.service"
 systemctl stop "docker.linuxserver.sonarr.service"

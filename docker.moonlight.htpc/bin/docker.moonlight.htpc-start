@@ -5,6 +5,10 @@ oe_setup_addon docker.moonlight.htpc
 
 echo $ADDON_DIR
 
+echo "Creating network"
+
+docker network create --driver bridge htpc || true
+
 systemctl enable "${ADDON_DIR}/system.d/docker.linuxserver.plex.service"
 systemctl enable "${ADDON_DIR}/system.d/docker.linuxserver.bazarr.service"
 systemctl enable "${ADDON_DIR}/system.d/docker.linuxserver.sonarr.service"

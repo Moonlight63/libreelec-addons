@@ -5,13 +5,23 @@ oe_setup_addon docker.moonlight.htpc
 
 case $1 in
   'start')
-    systemctl start "${ADDON_DIR}/system.d/docker.linuxserver.plex.service"
-    systemctl start "${ADDON_DIR}/system.d/docker.linuxserver.bazarr.service"
-    systemctl start "${ADDON_DIR}/system.d/docker.linuxserver.sonarr.service"
-    systemctl start "${ADDON_DIR}/system.d/docker.linuxserver.radarr.service"
-    systemctl start "${ADDON_DIR}/system.d/docker.linuxserver.prowlarr.service"
-    systemctl start "${ADDON_DIR}/system.d/docker.linuxserver.overseerr.service"
-    systemctl start "${ADDON_DIR}/system.d/docker.linuxserver.transmission.service"
+    systemctl enable "${ADDON_DIR}/system.d/docker.linuxserver.plex.service"
+    systemctl enable "${ADDON_DIR}/system.d/docker.linuxserver.bazarr.service"
+    systemctl enable "${ADDON_DIR}/system.d/docker.linuxserver.sonarr.service"
+    systemctl enable "${ADDON_DIR}/system.d/docker.linuxserver.radarr.service"
+    systemctl enable "${ADDON_DIR}/system.d/docker.linuxserver.prowlarr.service"
+    systemctl enable "${ADDON_DIR}/system.d/docker.linuxserver.overseerr.service"
+    systemctl enable "${ADDON_DIR}/system.d/docker.linuxserver.transmission.service"
+
+    chmod +x "${ADDON_DIR}/bin"/*
+
+    systemctl start "docker.linuxserver.plex.service"
+    systemctl start "docker.linuxserver.bazarr.service"
+    systemctl start "docker.linuxserver.sonarr.service"
+    systemctl start "docker.linuxserver.radarr.service"
+    systemctl start "docker.linuxserver.prowlarr.service"
+    systemctl start "docker.linuxserver.overseerr.service"
+    systemctl start "docker.linuxserver.transmission.service"
     ;;
   'stop')
     systemctl stop "${ADDON_DIR}/system.d/docker.linuxserver.plex.service"

@@ -4,8 +4,10 @@ Requires=service.system.docker.service
 After=service.system.docker.service
 
 [Service]
+Type=oneshot
 Restart=always
 RestartSec=10s
+RemainAfterExit=1
 StartLimitInterval=86400
 StartLimitBurst=3
 TimeoutStartSec=0

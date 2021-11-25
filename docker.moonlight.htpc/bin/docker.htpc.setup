@@ -1,7 +1,7 @@
 #!/bin/sh
 
-servicename="docker.moonlight.htpc"
-. /etc/profile
+# servicename="docker.moonlight.htpc"
+# . /etc/profile
 
 if [ -f /storage/.cache/timezone ]; then
  . /storage/.cache/timezone
@@ -9,7 +9,7 @@ else
  TIMEZONE="America/Los_Angeles"
 fi
 
-oe_setup_addon "$servicename"
+# oe_setup_addon "$servicename"
 
 #set uid/gid
 if [ "$E_manual_uid" = "false" ]; then
@@ -56,7 +56,7 @@ for i in "${V_data}/configs/plex" \
   else
     echo "skipping chown, make sure the folder $i is accessible by the user ${E_PUID}:${E_PGID}"
   fi
-  
+
 done
 
 docker network create --driver bridge htpc || true

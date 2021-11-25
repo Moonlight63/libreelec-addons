@@ -378,7 +378,7 @@ Opens a webpage in full screen with no decoration or notification windows, plus 
 
 <addon id="docker.moonlight.htpc"
        name="HTPC (LinuxServer.io)"
-       version="1.0.7"
+       version="1.0.8"
        provider-name="Moonlight and LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />

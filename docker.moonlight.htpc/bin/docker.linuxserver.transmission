@@ -1,6 +1,8 @@
 #!/bin/sh
 
-. ./docker.htpc.setup
+. /etc/profile
+oe_setup_addon docker.moonlight.htpc
+. $ADDON_DIR/bin/docker.htpc.setup
 
 name="transmission"
 

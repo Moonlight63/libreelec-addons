@@ -1,0 +1,22 @@
+#!/bin/sh
+
+. /etc/profile
+oe_setup_addon docker.moonlight.htpc
+
+echo $ADDON_DIR
+
+systemctl stop "docker.linuxserver.plex.service"
+systemctl stop "docker.linuxserver.bazarr.service"
+systemctl stop "docker.linuxserver.sonarr.service"
+systemctl stop "docker.linuxserver.radarr.service"
+systemctl stop "docker.linuxserver.prowlarr.service"
+systemctl stop "docker.linuxserver.overseerr.service"
+systemctl stop "docker.linuxserver.transmission.service"
+
+systemctl disable "docker.linuxserver.plex.service"
+systemctl disable "docker.linuxserver.bazarr.service"
+systemctl disable "docker.linuxserver.sonarr.service"
+systemctl disable "docker.linuxserver.radarr.service"
+systemctl disable "docker.linuxserver.prowlarr.service"
+systemctl disable "docker.linuxserver.overseerr.service"
+systemctl disable "docker.linuxserver.transmission.service"

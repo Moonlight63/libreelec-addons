@@ -4,9 +4,13 @@ Requires=service.system.docker.service
 After=service.system.docker.service
 
 [Service]
-ExecStart=/bin/sh /storage/.kodi/addons/%p/bin/docker.moonlight.htpc start
-ExecStop=/bin/sh /storage/.kodi/addons/%p/bin/docker.moonlight.htpc stop
-ExecReload=/bin/sh /storage/.kodi/addons/%p/bin/docker.moonlight.htpc reload
+Restart=always
+RestartSec=10s
+StartLimitInterval=86400
+StartLimitBurst=3
+TimeoutStartSec=0
+ExecStart=/bin/sh /storage/.kodi/addons/%p/bin/docker.moonlight.htpc-start
+ExecStop=/bin/sh /storage/.kodi/addons/%p/bin/docker.moonlight.htpc-stop
 
 [Install]
 WantedBy=multi-user.target

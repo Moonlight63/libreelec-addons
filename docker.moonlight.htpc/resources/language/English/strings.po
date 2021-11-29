@@ -114,6 +114,10 @@ msgctxt "#32110"
 msgid "VPN UFW Firewall"
 msgstr ""
 
+msgctxt "#32111"
+msgid "Alternate Transmission UI"
+msgstr ""
+
 msgctxt "#32201"
 msgid "none"
 msgstr ""

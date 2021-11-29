@@ -28,7 +28,7 @@ case $1 in
     systemctl start "docker.linuxserver.prowlarr.service"
     systemctl start "docker.linuxserver.overseerr.service"
     # systemctl start "docker.linuxserver.transmission.service"
-    systemctl start "docker.linuxserver.haugene.service"
+    systemctl start "docker.haugene.transmission.service"
     ;;
   'stop')
     systemctl stop "docker.linuxserver.plex.service"
@@ -38,7 +38,7 @@ case $1 in
     systemctl stop "docker.linuxserver.prowlarr.service"
     systemctl stop "docker.linuxserver.overseerr.service"
     # systemctl stop "docker.linuxserver.transmission.service"
-    systemctl stop "docker.linuxserver.haugene.service"
+    systemctl stop "docker.haugene.transmission.service"
 
     systemctl disable "docker.linuxserver.plex.service"
     systemctl disable "docker.linuxserver.bazarr.service"
@@ -47,7 +47,7 @@ case $1 in
     systemctl disable "docker.linuxserver.prowlarr.service"
     systemctl disable "docker.linuxserver.overseerr.service"
     # systemctl disable "docker.linuxserver.transmission.service"
-    systemctl disable "docker.linuxserver.haugene.service"
+    systemctl disable "docker.haugene.transmission.service"
 
     echo "Removing Network"
     docker network rm htpc
@@ -60,7 +60,7 @@ case $1 in
     systemctl restart "docker.linuxserver.prowlarr.service"
     systemctl restart "docker.linuxserver.overseerr.service"
     # systemctl restart "docker.linuxserver.transmission.service"
-    systemctl restart "docker.linuxserver.haugene.service"
+    systemctl restart "docker.haugene.transmission.service"
     ;;
   *)
 esac

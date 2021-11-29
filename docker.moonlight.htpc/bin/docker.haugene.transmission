@@ -6,7 +6,7 @@ oe_setup_addon docker.moonlight.htpc
 
 name="transmission"
 
-DOCKERIMAGE="haugene/transmission"
+DOCKERIMAGE="haugene/transmission-openvpn"
 
 
 docker rm "$name" 2>/dev/null

@@ -20,7 +20,6 @@
 
 import xbmcaddon
 import xbmcgui
-from libs.utility import debugTrace, errorTrace, infoTrace, getID, getName
 
 xbmc.log("-- Entered passwordpopup.py")
     

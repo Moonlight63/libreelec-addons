@@ -60,3 +60,288 @@ msgstr ""
 msgctxt "#30023"
 msgid "GID"
 msgstr ""
+
+
+
+
+
+
+
+
+# Transmission VPN Settings
+
+msgctxt "#32000"
+msgid "Transmission VPN Configuration"
+msgstr ""
+
+msgctxt "#32001"
+msgid "Enter details, then validate VPN connections"
+msgstr ""
+
+msgctxt "#32002"
+msgid "Set up VPN provider, then validate VPN connections"
+msgstr ""
+
+msgctxt "#32003"
+msgid "[I]*** VPN provider update available, revalidate connections[/I] ***"
+msgstr ""
+
+msgctxt "#32004"
+msgid "Click here to update VPN settings"
+msgstr ""
+
+msgctxt "#32005"
+msgid "VPN Provider"
+msgstr ""
+
+msgctxt "#32006"
+msgid "User name"
+msgstr ""
+
+msgctxt "#32007"
+msgid "Password"
+msgstr ""
+
+msgctxt "#32008"
+msgid "Show password"
+msgstr ""
+
+msgctxt "#32009"
+msgid "Advanced settings (leave as default if in doubt)"
+msgstr ""
+
+msgctxt "#32010"
+msgid "Protocol (UDP recommended)"
+msgstr ""
+
+msgctxt "#32011"
+msgid "UDP"
+msgstr ""
+
+msgctxt "#32012"
+msgid "TCP"
+msgstr ""
+
+msgctxt "#32013"
+msgid "UDP and TCP"
+msgstr ""
+
+msgctxt "#32014"
+msgid "Use VPN provider default UDP port"
+msgstr ""
+
+msgctxt "#32015"
+msgid "  Alternative UDP port"
+msgstr ""
+
+msgctxt "#32016"
+msgid "Use VPN provider default TCP port"
+msgstr ""
+
+msgctxt "#32017"
+msgid "  Alternative TCP port"
+msgstr ""
+
+msgctxt "#32018"
+msgid "[I]User Defined[/I]  provider"
+msgstr ""
+
+msgctxt "#32019"
+msgid "User Defined import wizard"
+msgstr ""
+
+msgctxt "#32020"
+msgid "View last User Defined import wizard log"
+msgstr ""
+
+msgctxt "#32021"
+msgid "Manage user name and password"
+msgstr ""
+
+msgctxt "#32022"
+msgid "Manage client or user key and cert files"
+msgstr ""
+
+msgctxt "#32023"
+msgid "None"
+msgstr ""
+
+msgctxt "#32024"
+msgid "Single"
+msgstr ""
+
+msgctxt "#32025"
+msgid "Multiple"
+msgstr ""
+
+msgctxt "#32026"
+msgid "Manage key password"
+msgstr ""
+
+
+
+
+
+
+
+
+
+
+
+# List of VPN providers
+
+# msgctxt "#32201"
+# msgid "AirVPN"
+# msgstr ""
+
+# msgctxt "#32202"
+# msgid "black.box"
+# msgstr ""
+
+# msgctxt "#32203"
+# msgid "BTGuard"
+# msgstr ""
+
+# msgctxt "#32204"
+# msgid "BulletVPN"
+# msgstr ""
+
+# msgctxt "#32205"
+# msgid "Celo"
+# msgstr ""
+
+# msgctxt "#32206"
+# msgid "CyberGhost"
+# msgstr ""
+
+# msgctxt "#32207"
+# msgid "ExpressVPN"
+# msgstr ""
+
+# msgctxt "#32208"
+# msgid "Hide.Me"
+# msgstr ""
+
+# msgctxt "#32209"
+# msgid "Hide My Ass"
+# msgstr ""
+
+# msgctxt "#32210"
+# msgid "HideIPVPN"
+# msgstr ""
+
+# msgctxt "#32211"
+# msgid "Invisible Browsing VPN"
+# msgstr ""
+
+msgctxt "#32212"
+msgid "IPVanish"
+msgstr ""
+
+# msgctxt "#32213"
+# msgid "IVPN"
+# msgstr ""
+
+# msgctxt "#32214"
+# msgid "LimeVPN"
+# msgstr ""
+
+# msgctxt "#32215"
+# msgid "LiquidVPN"
+# msgstr ""
+
+# msgctxt "#32216"
+# msgid "Mullvad"
+# msgstr ""
+
+msgctxt "#32217"
+msgid "NordVPN"
+msgstr ""
+
+# msgctxt "#32218"
+# msgid "Perfect Privacy"
+# msgstr ""
+
+msgctxt "#32219"
+msgid "PIA"
+msgstr ""
+
+# msgctxt "#32220"
+# msgid "PrivateVPN"
+# msgstr ""
+
+# msgctxt "#32221"
+# msgid "proXPN"
+# msgstr ""
+
+# msgctxt "#32222"
+# msgid "RA4W VPN"
+# msgstr ""
+
+# msgctxt "#32223"
+# msgid "SaferVPN"
+# msgstr ""
+
+# msgctxt "#32224"
+# msgid "SecureVPN.to"
+# msgstr ""
+
+# msgctxt "#32225"
+# msgid "Shellfire"
+# msgstr ""
+
+# msgctxt "#32226"
+# msgid "Smart DNS Proxy"
+# msgstr ""
+
+# msgctxt "#32227"
+# msgid "tigerVPN"
+# msgstr ""
+
+# msgctxt "#32228"
+# msgid "TorGuard"
+# msgstr ""
+
+# msgctxt "#32229"
+# msgid "TotalVPN"
+# msgstr ""
+
+# msgctxt "#32230"
+# msgid "User Defined"
+# msgstr ""
+
+# msgctxt "#32231"
+# msgid "VanishedVPN"
+# msgstr ""
+
+# msgctxt "#32232"
+# msgid "VPN.ac"
+# msgstr ""
+
+# msgctxt "#32233"
+# msgid "VPN.ht"
+# msgstr ""
+
+# msgctxt "#32234"
+# msgid "VPN Unlimited"
+# msgstr ""
+
+# msgctxt "#32235"
+# msgid "VPNArea"
+# msgstr ""
+
+# msgctxt "#32236"
+# msgid "VPNSecure"
+# msgstr ""
+
+msgctxt "#32237"
+msgid "VyprVPN"
+msgstr ""
+
+# msgctxt "#32238"
+# msgid "WiTopia"
+# msgstr ""
+
+# msgctxt "#32239"
+# msgid "Windscribe"
+# msgstr ""

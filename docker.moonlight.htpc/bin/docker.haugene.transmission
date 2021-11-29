@@ -21,7 +21,7 @@ docker run --cap-add=NET_ADMIN --name="$name" \
            -e TZ="$TIMEZONE" \
            -e LOCAL_NETWORK=192.168.0.0/16 \
            -e OPENVPN_PROVIDER=$vpn_provider \
-           -e OPENVPN_CONFIG=default \
+           -e OPENVPN_CONFIG=$vpn_config \
            -e OPENVPN_USERNAME=$vpn_username \
            -e OPENVPN_PASSWORD=$vpn_password \
            -e CREATE_TUN_DEVICE=true \

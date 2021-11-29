@@ -15,7 +15,7 @@ docker rmi $(docker images | grep "$DOCKERIMAGE" | grep '<none>' | sed 's/\s\+/\
 
 
 
-docker run --name="$name" \
+docker run --cap-add=NET_ADMIN --name="$name" \
            -e PUID="$E_PUID" \
            -e PGID="$E_PGID" \
            -e TZ="$TIMEZONE" \
@@ -24,6 +24,9 @@ docker run --name="$name" \
            -e OPENVPN_CONFIG=default \
            -e OPENVPN_USERNAME=$vpn_username \
            -e OPENVPN_PASSWORD=$vpn_password \
+           -e CREATE_TUN_DEVICE=true \
+           -e ENABLE_UFW=false \
+           -e TRANSMISSION_WEB_UI=flood-for-transmission \
            -v "${V_data}/configs/transmission":/data/transmission-home \
            -v "${V_data}/downloads/transmission/completed":/data/completed \
            -v "${V_data}/downloads/transmission/incomplete":/data/incomplete \

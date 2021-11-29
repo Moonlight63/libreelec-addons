@@ -106,6 +106,10 @@ msgctxt "#32008"
 msgid "Show password"
 msgstr ""
 
+msgctxt "#32109"
+msgid "VPN Config File (Location)"
+msgstr ""
+
 msgctxt "#32009"
 msgid "Advanced settings (leave as default if in doubt)"
 msgstr ""

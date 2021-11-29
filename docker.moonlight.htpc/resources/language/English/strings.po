@@ -110,6 +110,34 @@ msgctxt "#32109"
 msgid "VPN Config File (Location)"
 msgstr ""
 
+msgctxt "#32110"
+msgid "VPN UFW Firewall"
+msgstr ""
+
+msgctxt "#32201"
+msgid "none"
+msgstr ""
+
+msgctxt "#32202"
+msgid "flood-for-transmission"
+msgstr ""
+
+msgctxt "#32203"
+msgid "shift"
+msgstr ""
+
+msgctxt "#32204"
+msgid "combustion"
+msgstr ""
+
+msgctxt "#32205"
+msgid "kettu"
+msgstr ""
+
+msgctxt "#32206"
+msgid "transmission-web-control"
+msgstr ""
+
 msgctxt "#32009"
 msgid "Advanced settings (leave as default if in doubt)"
 msgstr ""

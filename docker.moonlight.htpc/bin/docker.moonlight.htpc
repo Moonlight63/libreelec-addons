@@ -5,6 +5,8 @@ oe_setup_addon docker.moonlight.htpc
 
 echo $ADDON_DIR
 
+find $ADDON_DIR/configs -name '*.sh' -exec chmod +x {} \;
+
 case $1 in
   'start')
     echo "Creating network"
@@ -88,7 +90,7 @@ case $1 in
     else
       systemctl restart "docker.linuxserver.transmission.service"
     fi
-    
+
     ;;
   *)
 esac

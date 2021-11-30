@@ -16,6 +16,7 @@ docker rmi $(docker images | grep "$DOCKERIMAGE" | grep '<none>' | sed 's/\s\+/\
 
 # -e LOCAL_NETWORK=192.168.0.0/16 \
 # -v "${ADDON_DIR}/configs/purevpn":/etc/openvpn/purevpn \
+# -v "${V_data}/configs/transmission":/data/transmission-home \
 
 # Added tcp for PIA because UDP has known issues. Also changed DNS servers.
 docker run --cap-add=NET_ADMIN --name="$name" \
@@ -30,8 +31,9 @@ docker run --cap-add=NET_ADMIN --name="$name" \
            -e CREATE_TUN_DEVICE=true \
            -e ENABLE_UFW=$vpn_firewall \
            -e TRANSMISSION_WEB_UI=$transmission_ui \
-           -e OPENVPN_OPTS="--inactive 3600 --ping 10 --ping-exit 60 --pull-filter ignore ping" \
-           -v "${V_data}/configs/transmission":/data/transmission-home \
+           -e TRANSMISSION_RATIO_LIMIT=0 \
+           -e TRANSMISSION_RATIO_LIMIT_ENABLED=true \
+           -e OPENVPN_OPTS="--inactive 3600 --ping 10 --ping-exit 60" \
            -v "${V_data}/downloads/transmission/completed":/data/completed \
            -v "${V_data}/downloads/transmission/incomplete":/data/incomplete \
            -v "${V_data}/downloads/transmission/watch":/data/watch \

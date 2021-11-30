@@ -15,6 +15,8 @@ docker rmi $(docker images | grep "$DOCKERIMAGE" | grep '<none>' | sed 's/\s\+/\
 
 
 # -e LOCAL_NETWORK=192.168.0.0/16 \
+
+# Added tcp for PIA because UDP has known issues. Also changed DNS servers.
 docker run --cap-add=NET_ADMIN --name="$name" \
            -e PUID="$E_PUID" \
            -e PGID="$E_PGID" \
@@ -23,14 +25,18 @@ docker run --cap-add=NET_ADMIN --name="$name" \
            -e OPENVPN_CONFIG=$vpn_config \
            -e OPENVPN_USERNAME=$vpn_username \
            -e OPENVPN_PASSWORD=$vpn_password \
+           -e PIA_OPENVPN_CONFIG_BUNDLE=openvpn-tcp \
            -e CREATE_TUN_DEVICE=true \
            -e ENABLE_UFW=$vpn_firewall \
            -e TRANSMISSION_WEB_UI=$transmission_ui \
-           -e OPENVPN_OPTS="--inactive 3600 --ping 10 --ping-exit 60" \
+           -e OPENVPN_OPTS="--inactive 3600 --ping 10 --ping-exit 60 --pull-filter ignore ping" \
            -v "${V_data}/configs/transmission":/data/transmission-home \
            -v "${V_data}/downloads/transmission/completed":/data/completed \
            -v "${V_data}/downloads/transmission/incomplete":/data/incomplete \
            -v "${V_data}/downloads/transmission/watch":/data/watch \
+           -v "${ADDON_DIR}/configs/purevpn":/etc/openvpn/purevpn \
            --net=htpc \
-           -p 9091:9091 \
+           -p 9092:9091 \
+           --dns 1.1.1.1 \
+           --dns 8.8.8.8 \
            "$DOCKERIMAGE":latest

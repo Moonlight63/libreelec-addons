@@ -75,7 +75,7 @@ msgid "Transmission VPN Configuration"
 msgstr ""
 
 msgctxt "#32001"
-msgid "Enter details, then validate VPN connections"
+msgid "Use VPN Connection"
 msgstr ""
 
 msgctxt "#32002"
@@ -302,9 +302,9 @@ msgctxt "#32219"
 msgid "PIA"
 msgstr ""
 
-# msgctxt "#32220"
-# msgid "PrivateVPN"
-# msgstr ""
+msgctxt "#32220"
+msgid "PureVPN"
+msgstr ""
 
 # msgctxt "#32221"
 # msgid "proXPN"

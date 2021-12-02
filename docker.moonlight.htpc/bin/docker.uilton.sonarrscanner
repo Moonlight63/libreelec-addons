@@ -17,9 +17,7 @@ read_dom () {
     read -d \< ENTITY CONTENT
 }
 
-while read s; do if [ "$s" = config.xml ]; then break; fi; done \
-  < <(inotifywait  -e create,open --format '%f' --quiet "${V_data}/configs/sonarr" --monitor)
-
+while [ ! -f "${V_data}/configs/sonarr/config.xml" ]; do sleep 5; done
 
 while read_dom; do
     if [[ $ENTITY = "ApiKey" ]] ; then
@@ -27,10 +25,7 @@ while read_dom; do
     fi
 done < "${V_data}/configs/sonarr/config.xml"
 
-
-while read s; do if [ "$s" = config.xml ]; then break; fi; done \
-  < <(inotifywait  -e create,open --format '%f' --quiet "${V_data}/configs/radarr" --monitor)
-
+while [ ! -f "${V_data}/configs/radarr/config.xml" ]; do sleep 5; done
 
 while read_dom; do
     if [[ $ENTITY = "ApiKey" ]] ; then

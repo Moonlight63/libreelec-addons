@@ -33,10 +33,13 @@ docker run --cap-add=NET_ADMIN --name="$name" \
            -e TRANSMISSION_WEB_UI=$transmission_ui \
            -e TRANSMISSION_RATIO_LIMIT=0 \
            -e TRANSMISSION_RATIO_LIMIT_ENABLED=true \
+           -e TRANSMISSION_DOWNLOAD_QUEUE_ENABLED=false \
+           -e TRANSMISSION_PEER_LIMIT_GLOBAL=2000 \
            -e OPENVPN_OPTS="--inactive 3600 --ping 10 --ping-exit 60" \
            -v "${V_data}/downloads/transmission/completed":/data/completed \
            -v "${V_data}/downloads/transmission/incomplete":/data/incomplete \
            -v "${V_data}/downloads/transmission/watch":/data/watch \
+           -v "${V_data}/configs/transmission":/data/transmission-home \
            --net=htpc \
            -p 9092:9091 \
            --dns 1.1.1.1 \

@@ -18,6 +18,7 @@ case $1 in
     systemctl enable "${ADDON_DIR}/system.d/docker.linuxserver.radarr.service"
     systemctl enable "${ADDON_DIR}/system.d/docker.linuxserver.prowlarr.service"
     systemctl enable "${ADDON_DIR}/system.d/docker.linuxserver.overseerr.service"
+    systemctl enable "${ADDON_DIR}/system.d/docker.uilton.sonarrscanner.service"
 
     if [ "$use_vpn" = "true" ]; then
       systemctl enable "${ADDON_DIR}/system.d/docker.haugene.transmission.service"
@@ -34,6 +35,7 @@ case $1 in
     systemctl start "docker.linuxserver.radarr.service"
     systemctl start "docker.linuxserver.prowlarr.service"
     systemctl start "docker.linuxserver.overseerr.service"
+    systemctl start "docker.uilton.sonarrscanner.service"
 
     if [ "$use_vpn" = "true" ]; then
       systemctl start "docker.haugene.transmission.service"
@@ -50,6 +52,7 @@ case $1 in
     systemctl stop "docker.linuxserver.radarr.service"
     systemctl stop "docker.linuxserver.prowlarr.service"
     systemctl stop "docker.linuxserver.overseerr.service"
+    systemctl stop "docker.uilton.sonarrscanner.service"
 
     if [ "$use_vpn" = "true" ]; then
       systemctl stop "docker.haugene.transmission.service"
@@ -65,6 +68,7 @@ case $1 in
     systemctl disable "docker.linuxserver.radarr.service"
     systemctl disable "docker.linuxserver.prowlarr.service"
     systemctl disable "docker.linuxserver.overseerr.service"
+    systemctl disable "docker.uilton.sonarrscanner.service"
 
     if [ "$use_vpn" = "true" ]; then
       systemctl disable "docker.haugene.transmission.service"
@@ -83,6 +87,7 @@ case $1 in
     systemctl restart "docker.linuxserver.radarr.service"
     systemctl restart "docker.linuxserver.prowlarr.service"
     systemctl restart "docker.linuxserver.overseerr.service"
+    systemctl restart "docker.uilton.sonarrscanner.service"
 
     if [ "$use_vpn" = "true" ]; then
       systemctl restart "docker.haugene.transmission.service"

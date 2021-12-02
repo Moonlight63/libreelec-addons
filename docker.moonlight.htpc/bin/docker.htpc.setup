@@ -18,6 +18,7 @@ if [ "$E_manual_uid" = "false" ]; then
 fi
 
 mkdir -p "${V_data}/configs/plex" \
+"${V_data}/configs/jellyfin" \
 "${V_data}/configs/radarr" \
 "${V_data}/configs/sonarr" \
 "${V_data}/configs/bazarr" \
@@ -34,6 +35,7 @@ mkdir -p "${V_data}/configs/plex" \
 "${V_data}/downloads/transmission/watch"
 
 for i in "${V_data}/configs/plex" \
+"${V_data}/configs/jellyfin" \
 "${V_data}/configs/radarr" \
 "${V_data}/configs/sonarr" \
 "${V_data}/configs/bazarr" \

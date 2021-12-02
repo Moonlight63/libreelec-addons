@@ -1,38 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
-<addon id="docker.linuxserver.prowlarr"
-       name="Prowlarr (LinuxServer.io)"
-       version="1.0.2"
-       provider-name="Moonlight, Based on LinuxServer.io">
-  <requires>
-    <import addon="xbmc.python" version="3.0.0"/>
-    <import addon="service.system.docker" version="0.0.0" />
-  </requires>
-  <extension point="xbmc.service" library="default.py">
-    <provides></provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary>Prowlarr in a docker container</summary>
-    <description>
-    </description>
-    <disclaimer>
-    </disclaimer>
-    <news>
-docker.linuxserver.prowlarr:
---------------------------
-
-1.0.0
--Initial release
-    </news>
-    <platform>all</platform>
-    <website>http://linuxserver.io/</website>
-    <assets>
-        <icon>icon.png</icon>
-        <fanart>fanart.jpg</fanart>
-    </assets>
-  </extension>
-</addon>
-
 <addon id="script.moonlight.bazarrviewer"
        name="Bazarr"
        version="1.0.0"
@@ -57,49 +24,6 @@ Open Bazarr in a kiosk window.
     </news>
     <platform>all</platform>
     <assets>
-    </assets>
-  </extension>
-</addon>
-
-<addon id="docker.linuxserver.transmission"
-       name="Transmission (LinuxServer.io)"
-       version="1.0.3"
-       provider-name="LinuxServer.io">
-  <requires>
-    <import addon="xbmc.python" version="3.0.0"/>
-    <import addon="service.system.docker" version="0.0.0" />
-  </requires>
-  <extension point="xbmc.service" library="default.py">
-    <provides></provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary>Transmission in a docker container</summary>
-    <description>
-Transmission is designed for easy, powerful use. Transmission has the features you want from a BitTorrent client: encryption, a web interface, peer exchange, magnet links, DHT, µTP, UPnP and NAT-PMP port forwarding, webseed support, watch directories, tracker editing, global and per-torrent speed limits, and more.
-
-This is a docker container brought to you by the LinuxServer.io team.
-Please visit https://linuxserver.io for more information.
-    </description>
-    <news>
-docker.linuxserver.transmission:
---------------------------------
-
-1.0.2
-- Fix timezone bug
-
-1.0.1
-- Added aarch64 support
-
-1.0.0
-- Initial release
-    </news>
-    <disclaimer>
-    </disclaimer>
-    <platform>all</platform>
-    <website>http://linuxserver.io/</website>
-    <assets>
-        <icon>icon.png</icon>
-        <fanart>fanart.jpg</fanart>
     </assets>
   </extension>
 </addon>
@@ -134,47 +58,10 @@ Open Radarr in a kiosk window.
   </extension>
 </addon>
 
-<addon id="docker.linuxserver.radarr"
-       name="Radarr (LinuxServer.io)"
-       version="1.0.1"
-       provider-name="LinuxServer.io">
-  <requires>
-    <import addon="xbmc.python" version="3.0.0"/>
-    <import addon="service.system.docker" version="0.0.0" />
-  </requires>
-  <extension point="xbmc.service" library="default.py">
-    <provides></provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary>Radarr in a docker container</summary>
-    <description>
-A fork of Sonarr to work with movies à la Couchpotato.
-
-This is a docker container brought to you by the LinuxServer.io team.
-Please visit https://linuxserver.io for more information.
-    </description>
-    <disclaimer>
-    </disclaimer>
-    <news>
-docker.linuxserver.radarr:
---------------------------
-
-1.0.0
--Initial release
-    </news>
-    <platform>all</platform>
-    <website>http://linuxserver.io/</website>
-    <assets>
-        <icon>icon.png</icon>
-        <fanart>fanart.jpg</fanart>
-    </assets>
-  </extension>
-</addon>
-
 <addon
   id="repository.moonlight.docker.addons"
   name="Moonlight's PVRBox Add-ons"
-  version="1.1.4"
+  version="1.2.0"
   provider-name="Moonlight, Based on linuxserver.io">
   <requires>
     <import addon="xbmc.addon" version="16.0.0"/>
@@ -194,90 +81,6 @@ Please visit https://linuxserver.io for more information.
     </description>
     <disclaimer> </disclaimer>
     <platform>all</platform>
-  </extension>
-</addon>
-
-<addon id="docker.linuxserver.sonarr"
-       name="Sonarr (LinuxServer.io)"
-       version="1.0.5"
-       provider-name="LinuxServer.io">
-  <requires>
-    <import addon="xbmc.python" version="3.0.0"/>
-    <import addon="service.system.docker" version="0.0.0" />
-  </requires>
-  <extension point="xbmc.service" library="default.py">
-    <provides></provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary>Sonarr in a docker container</summary>
-    <description>
-Sonarr (formerly NZBdrone) is a PVR for usenet and bittorrent users. It can monitor multiple RSS feeds for new episodes of your favorite shows and will grab, sort and rename them.
-
-This is a docker container brought to you by the LinuxServer.io team.
-Please visit https://linuxserver.io for more information.
-    </description>
-    <disclaimer>
-    </disclaimer>
-    <news>
-docker.linuxserver.sonarr:
---------------------------
-
-1.0.4
-- Fix timezone bug
-
-1.0.3
-- Added aarch64 support
-
-1.0.2
-- Run as user nobody
-
-1.0.1
-- Unified addon for x86_64 and arm
-
-1.0.0
--Initial release
-    </news>
-    <platform>all</platform>
-    <website>http://linuxserver.io/</website>
-    <assets>
-        <icon>icon.png</icon>
-        <fanart>fanart.jpg</fanart>
-    </assets>
-  </extension>
-</addon>
-
-<addon id="docker.linuxserver.bazarr"
-       name="Bazarr (LinuxServer.io)"
-       version="1.0.1"
-       provider-name="Moonlight, Based on LinuxServer.io">
-  <requires>
-    <import addon="xbmc.python" version="3.0.0"/>
-    <import addon="service.system.docker" version="0.0.0" />
-  </requires>
-  <extension point="xbmc.service" library="default.py">
-    <provides></provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary>Bazarr in a docker container</summary>
-    <description>
-Bazarr is a companion application to Sonarr and Radarr. It manages and downloads subtitles based on your requirements.
-
-This is a docker container brought to you by the LinuxServer.io team.
-Please visit https://linuxserver.io for more information.
-    </description>
-    <disclaimer>
-    </disclaimer>
-    <news>
-docker.linuxserver.bazarr:
---------------------------
-
-1.0.0
--Initial release
-    </news>
-    <platform>all</platform>
-    <website>http://linuxserver.io/</website>
-    <assets>
-    </assets>
   </extension>
 </addon>
 
@@ -374,7 +177,7 @@ Opens a webpage in full screen with no decoration or notification windows, plus 
 
 <addon id="docker.moonlight.htpc"
        name="HTPC (LinuxServer.io)"
-       version="1.0.29"
+       version="1.0.30"
        provider-name="Moonlight and LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />
@@ -387,10 +190,11 @@ Opens a webpage in full screen with no decoration or notification windows, plus 
     <description>
 A self hosted full stack of docker containers to build a self contained PVR system.
 
-- Transmission
+- Transmission /w VPN
 - Prowlarr
 - Sonarr
 - Radarr
+- Sonarr Scanner by uilton-oliveira
 - Bazarr
 - OverSeerr
 - Plex
@@ -401,39 +205,6 @@ Combine with PlexKodiConnect and Embuary skin for a unified experience.
     <disclaimer>
     </disclaimer>
     <news>
-    </news>
-    <platform>all</platform>
-    <website>http://linuxserver.io/</website>
-    <assets>
-        <icon>icon.png</icon>
-        <fanart>fanart.jpg</fanart>
-    </assets>
-  </extension>
-</addon>
-
-<addon id="docker.linuxserver.overseerr"
-       name="OverSeerr (LinuxServer.io)"
-       version="1.0.1"
-       provider-name="Moonlight, Based on LinuxServer.io">
-  <requires>
-    <import addon="xbmc.python" version="3.0.0"/>
-    <import addon="service.system.docker" version="0.0.0" />
-  </requires>
-  <extension point="xbmc.service" library="default.py">
-    <provides></provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary>OverSeerr in a docker container</summary>
-    <description>
-    </description>
-    <disclaimer>
-    </disclaimer>
-    <news>
-docker.linuxserver.overseerr:
---------------------------
-
-1.0.0
--Initial release
     </news>
     <platform>all</platform>
     <website>http://linuxserver.io/</website>
@@ -474,82 +245,6 @@ docker.linuxserver.overseerr:
     </news>
     <platform></platform>
     <assets>
-    </assets>
-  </extension>
-</addon>
-
-<addon id="docker.linuxserver.plex"
-       name="Plex (LinuxServer.io)"
-       version="2.0.3"
-       provider-name="LinuxServer.io">
-  <requires>
-    <import addon="service.system.docker" version="0.0.0" />
-  </requires>
-  <extension point="xbmc.service" library="default.py">
-    <provides></provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary>Plex Media Server as a Docker container</summary>
-    <description>
-Plex organizes video, music and photos from personal media libraries and streams them to smart televisions, streaming boxes and mobile devices.
-
-This is a docker container brought to you by the LinuxServer.io team.
-Please visit https://linuxserver.io for more information.
-    </description>
-    <disclaimer>
-    </disclaimer>
-    <news>
-docker.linuxserver.plex:
-------------------------
-
-2.0.1
-- Remove LibreELEC dependency
-
-2.0.0
-- Kodi Matrix compatibility
-
-1.2.0
-- Add uid/gid override for remote mount users (0/root not supported)
-- Auto-detect vaapi
-
-1.1.0
-- Switch to multi-arch builds
-- fix chown logic of external data
-- add support for specific versions
-
-1.0.8
-- Add mount point for photos
-
-1.0.7
-- Support *elec
-
-1.0.6
-- Use updater addon for image updates
-- Faster start on boot
-
-1.0.5
-- Wait for network
-
-1.0.4
-- Fix timezone bug
-
-1.0.3
-- Added aarch64 support
-
-1.0.2
-- Run as user nobody
-
-1.0.1
-- Unified addon for x86_64 and arm
-
-1.0.0
-- Initial addon
-    </news>
-    <platform>all</platform>
-    <website>http://linuxserver.io/</website>
-    <assets>
-        <icon>icon.png</icon>
-        <fanart>fanart.jpg</fanart>
     </assets>
   </extension>
 </addon>

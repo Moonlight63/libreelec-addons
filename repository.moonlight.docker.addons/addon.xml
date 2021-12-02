@@ -2,7 +2,7 @@
 <addon
   id="repository.moonlight.docker.addons"
   name="Moonlight's PVRBox Add-ons"
-  version="1.1.4"
+  version="1.2.0"
   provider-name="Moonlight, Based on linuxserver.io">
   <requires>
     <import addon="xbmc.addon" version="16.0.0"/>

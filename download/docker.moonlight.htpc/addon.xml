@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="docker.moonlight.htpc"
        name="HTPC (LinuxServer.io)"
-       version="1.0.29"
+       version="1.0.30"
        provider-name="Moonlight and LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />
@@ -14,10 +14,11 @@
     <description>
 A self hosted full stack of docker containers to build a self contained PVR system.
 
-- Transmission
+- Transmission /w VPN
 - Prowlarr
 - Sonarr
 - Radarr
+- Sonarr Scanner by uilton-oliveira
 - Bazarr
 - OverSeerr
 - Plex

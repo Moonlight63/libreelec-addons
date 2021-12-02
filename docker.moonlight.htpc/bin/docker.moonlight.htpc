@@ -9,6 +9,13 @@ find $ADDON_DIR/configs -name '*.sh' -exec chmod +x {} \;
 
 case $1 in
   'start')
+
+    while (! docker stats --no-stream ); do
+      echo "Waiting for Docker"
+      sleep 2
+    done
+
+
     echo "Creating network"
     docker network create --driver bridge htpc || true
 

@@ -40,6 +40,7 @@ docker run --cap-add=NET_ADMIN --name="$name" \
            -v "${V_data}/downloads/transmission/incomplete":/data/incomplete \
            -v "${V_data}/downloads/transmission/watch":/data/watch \
            -v "${V_data}/configs/transmission":/data/transmission-home \
+           -v "${ADDON_DIR}/configs/transmission-post-start.sh":/scripts/transmission-post-start.sh \
            --net=htpc \
            -p 9092:9091 \
            --dns 1.1.1.1 \

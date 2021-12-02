@@ -61,7 +61,7 @@ Open Radarr in a kiosk window.
 <addon
   id="repository.moonlight.docker.addons"
   name="Moonlight's PVRBox Add-ons"
-  version="1.2.0"
+  version="1.2.1"
   provider-name="Moonlight, Based on linuxserver.io">
   <requires>
     <import addon="xbmc.addon" version="16.0.0"/>
@@ -177,7 +177,7 @@ Opens a webpage in full screen with no decoration or notification windows, plus 
 
 <addon id="docker.moonlight.htpc"
        name="HTPC (LinuxServer.io)"
-       version="1.0.30"
+       version="1.0.31"
        provider-name="Moonlight and LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />

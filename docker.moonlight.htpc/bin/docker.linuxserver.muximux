@@ -4,16 +4,16 @@
 oe_setup_addon docker.moonlight.htpc
 # . $ADDON_DIR/bin/docker.htpc.setup
 
-name="radarr"
+name="dashboard"
 
 #get arch variable from os
 LEARCHVAR=`sed -e '/LIBREELEC_ARCH/ !d' -e 's/[^.]*\.\([^"]*\).*/\1/' /etc/os-release`
 
 #figure out which docker hub image to use
 if [ "$LEARCHVAR" = "x86_64" ]; then
-  DOCKERIMAGE="linuxserver/radarr"
+  DOCKERIMAGE="linuxserver/muximux"
 elif [ "$LEARCHVAR" = "arm" ] || [ "$LEARCHVAR" = "aarch64" ]; then
-  DOCKERIMAGE="lsioarmhf/radarr"
+  DOCKERIMAGE="lsioarmhf/muximux"
 fi
 
 docker rm "$name" 2>/dev/null
@@ -24,9 +24,7 @@ docker run --name="$name" \
            -e PUID="$E_PUID" \
            -e PGID="$E_PGID" \
            -e TZ="$TIMEZONE" \
-           -v "${V_data}/configs/radarr":/config \
-           -v "${V_data}/media/movies":/movies \
-           -v "${V_data}/downloads/transmission":/downloads \
+           -v "${V_data}/configs/muximux":/config \
            --net=htpc \
-           -p 7878:7878 \
+           -p 80:80 \
            "$DOCKERIMAGE":latest

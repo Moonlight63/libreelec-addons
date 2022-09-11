@@ -24,6 +24,7 @@ mkdir -p "${V_data}/configs/plex" \
 "${V_data}/configs/bazarr" \
 "${V_data}/configs/prowlarr" \
 "${V_data}/configs/overseerr" \
+"${V_data}/configs/ombi" \
 "${V_data}/configs/transmission" \
 "${V_data}/media/tvshows" \
 "${V_data}/media/movies" \
@@ -41,6 +42,7 @@ for i in "${V_data}/configs/plex" \
 "${V_data}/configs/bazarr" \
 "${V_data}/configs/prowlarr" \
 "${V_data}/configs/overseerr" \
+"${V_data}/configs/ombi" \
 "${V_data}/configs/transmission" \
 "${V_data}/media/tvshows" \
 "${V_data}/media/movies" \

@@ -1,59 +1,42 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
-<addon id="script.moonlight.bazarrviewer"
-       name="Bazarr"
-       version="1.0.0"
-       provider-name="Moonlight">
+<addon id="docker.moonlight.htpc"
+       name="HTPC (LinuxServer.io)"
+       version="1.0.33"
+       provider-name="Moonlight and LinuxServer.io">
   <requires>
-    <import addon="xbmc.python" version="3.0.0"/>
-    <import addon="script.moonlight.kiosk.browser" version="0.0.0" />
+    <import addon="service.system.docker" version="0.0.0" />
   </requires>
-  <extension point="xbmc.python.script" library="viewer.py">
-    <provides>executable</provides>
+  <extension point="xbmc.service" library="default.py">
+    <provides></provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary>Bazarr viewer</summary>
+    <summary>Moonlight's HTPC PVR Docker stack</summary>
     <description>
-Open Bazarr in a kiosk window.
-    </description>
-    <disclaimer>
-    </disclaimer>
-    <news>
-1.0.0
--Initial release
-    </news>
-    <platform>all</platform>
-    <assets>
-    </assets>
-  </extension>
-</addon>
+A self hosted full stack of docker containers to build a self contained PVR system.
 
-<addon id="script.moonlight.radarrviewer"
-       name="Radarr"
-       version="1.0.0"
-       provider-name="Moonlight">
-  <requires>
-    <import addon="xbmc.python" version="3.0.0"/>
-    <import addon="script.moonlight.kiosk.browser" version="0.0.0" />
-  </requires>
-  <extension point="xbmc.python.script" library="viewer.py">
-    <provides>executable</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary>Radarr viewer</summary>
-    <description>
-Open Radarr in a kiosk window.
+- Transmission /w VPN
+- Prowlarr
+- Sonarr
+- Radarr
+- Sonarr Scanner by uilton-oliveira
+- Bazarr
+- OverSeerr
+- Ombi
+- Plex
+
+Combine with PlexKodiConnect and Embuary skin for a unified experience.
+
     </description>
     <disclaimer>
     </disclaimer>
     <news>
-1.0.0
--Initial release
     </news>
     <platform>all</platform>
+    <website>http://linuxserver.io/</website>
     <assets>
         <icon>icon.png</icon>
-        <fanart>fanart.png</fanart>
+        <fanart>fanart.jpg</fanart>
     </assets>
   </extension>
 </addon>
@@ -84,8 +67,8 @@ Please visit https://linuxserver.io for more information.
   </extension>
 </addon>
 
-<addon id="script.moonlight.transmissionview"
-       name="Transmission"
+<addon id="script.moonlight.bazarrviewer"
+       name="Bazarr"
        version="1.0.0"
        provider-name="Moonlight">
   <requires>
@@ -96,9 +79,102 @@ Please visit https://linuxserver.io for more information.
     <provides>executable</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary>Transmission viewer</summary>
+    <summary>Bazarr viewer</summary>
     <description>
-Open Transmission in a kiosk window.
+Open Bazarr in a kiosk window.
+    </description>
+    <disclaimer>
+    </disclaimer>
+    <news>
+1.0.0
+-Initial release
+    </news>
+    <platform>all</platform>
+    <assets>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="script.moonlight.installall"
+       name="Install All"
+       version="1.0.1"
+       provider-name="Moonlight">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+    <import addon="script.moonlight.kiosk.browser" version="0.0.0" />
+    <import addon="script.moonlight.bazarrviewer" version="0.0.0" />
+    <import addon="script.moonlight.overseerrviewer" version="0.0.0" />
+    <import addon="script.moonlight.prowlarrviewer" version="0.0.0" />
+    <import addon="script.moonlight.radarrviewer" version="0.0.0" />
+    <import addon="script.moonlight.sonarrviewer" version="0.0.0" />
+    <import addon="script.moonlight.transmissionview" version="0.0.0" />
+
+    <!-- <import addon="skin.embuary-matrix" version="0.0.0" /> -->
+    <!-- <import addon="script.transmission" version="0.0.0" /> -->
+  </requires>
+  <extension point="xbmc.python.script" library="viewer.py">
+    <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Install all addons</summary>
+    <description>
+    </description>
+    <disclaimer>
+    </disclaimer>
+    <news>
+    </news>
+    <platform></platform>
+    <assets>
+    </assets>
+  </extension>
+</addon>
+
+<addon id="script.moonlight.kiosk.browser"
+      name="Kiosk Window"
+      version="1.0.1"
+      provider-name="Based on Team LibreELEC">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+  </requires>
+  <extension point="xbmc.python.script" library="default.py">
+    <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Kiosk Window</summary>
+    <description>
+Opens a webpage in full screen with no decoration or notification windows, plus a custom extention to force close when pressing the HomePage button on a remote. Based on the Google Chrome Launcher from LibreELEC.
+    </description>
+    <disclaimer>
+
+    </disclaimer>
+    <platform>all</platform>
+    <news>
+100
+- initial release
+    </news>
+    <assets>
+      <icon>resources/icon.png</icon>
+      <fanart>resources/fanart.png</fanart>
+
+    </assets>
+  </extension>
+</addon>
+
+<addon id="script.moonlight.overseerrviewer"
+       name="Overseerr"
+       version="1.0.0"
+       provider-name="Moonlight">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+    <import addon="script.moonlight.kiosk.browser" version="0.0.0" />
+  </requires>
+  <extension point="xbmc.python.script" library="viewer.py">
+    <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Overseerr viewer</summary>
+    <description>
+Open Overseerr in a kiosk window.
     </description>
     <disclaimer>
     </disclaimer>
@@ -144,107 +220,32 @@ Open Prowlarr in a kiosk window.
   </extension>
 </addon>
 
-<addon id="script.moonlight.kiosk.browser"
-      name="Kiosk Window"
-      version="1.0.1"
-      provider-name="Based on Team LibreELEC">
-  <requires>
-    <import addon="xbmc.python" version="3.0.0"/>
-  </requires>
-  <extension point="xbmc.python.script" library="default.py">
-    <provides>executable</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary>Kiosk Window</summary>
-    <description>
-Opens a webpage in full screen with no decoration or notification windows, plus a custom extention to force close when pressing the HomePage button on a remote. Based on the Google Chrome Launcher from LibreELEC.
-    </description>
-    <disclaimer>
-
-    </disclaimer>
-    <platform>all</platform>
-    <news>
-100
-- initial release
-    </news>
-    <assets>
-      <icon>resources/icon.png</icon>
-      <fanart>resources/fanart.png</fanart>
-
-    </assets>
-  </extension>
-</addon>
-
-<addon id="docker.moonlight.htpc"
-       name="HTPC (LinuxServer.io)"
-       version="1.0.32"
-       provider-name="Moonlight and LinuxServer.io">
-  <requires>
-    <import addon="service.system.docker" version="0.0.0" />
-  </requires>
-  <extension point="xbmc.service" library="default.py">
-    <provides></provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary>Moonlight's HTPC PVR Docker stack</summary>
-    <description>
-A self hosted full stack of docker containers to build a self contained PVR system.
-
-- Transmission /w VPN
-- Prowlarr
-- Sonarr
-- Radarr
-- Sonarr Scanner by uilton-oliveira
-- Bazarr
-- OverSeerr
-- Plex
-
-Combine with PlexKodiConnect and Embuary skin for a unified experience.
-
-    </description>
-    <disclaimer>
-    </disclaimer>
-    <news>
-    </news>
-    <platform>all</platform>
-    <website>http://linuxserver.io/</website>
-    <assets>
-        <icon>icon.png</icon>
-        <fanart>fanart.jpg</fanart>
-    </assets>
-  </extension>
-</addon>
-
-<addon id="script.moonlight.installall"
-       name="Install All"
-       version="1.0.1"
+<addon id="script.moonlight.radarrviewer"
+       name="Radarr"
+       version="1.0.0"
        provider-name="Moonlight">
   <requires>
     <import addon="xbmc.python" version="3.0.0"/>
     <import addon="script.moonlight.kiosk.browser" version="0.0.0" />
-    <import addon="script.moonlight.bazarrviewer" version="0.0.0" />
-    <import addon="script.moonlight.overseerrviewer" version="0.0.0" />
-    <import addon="script.moonlight.prowlarrviewer" version="0.0.0" />
-    <import addon="script.moonlight.radarrviewer" version="0.0.0" />
-    <import addon="script.moonlight.sonarrviewer" version="0.0.0" />
-    <import addon="script.moonlight.transmissionview" version="0.0.0" />
-
-    <!-- <import addon="skin.embuary-matrix" version="0.0.0" /> -->
-    <!-- <import addon="script.transmission" version="0.0.0" /> -->
   </requires>
   <extension point="xbmc.python.script" library="viewer.py">
     <provides>executable</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary>Install all addons</summary>
+    <summary>Radarr viewer</summary>
     <description>
+Open Radarr in a kiosk window.
     </description>
     <disclaimer>
     </disclaimer>
     <news>
+1.0.0
+-Initial release
     </news>
-    <platform></platform>
+    <platform>all</platform>
     <assets>
+        <icon>icon.png</icon>
+        <fanart>fanart.png</fanart>
     </assets>
   </extension>
 </addon>
@@ -279,8 +280,8 @@ Open Sonarr in a kiosk window.
   </extension>
 </addon>
 
-<addon id="script.moonlight.overseerrviewer"
-       name="Overseerr"
+<addon id="script.moonlight.transmissionview"
+       name="Transmission"
        version="1.0.0"
        provider-name="Moonlight">
   <requires>
@@ -291,9 +292,9 @@ Open Sonarr in a kiosk window.
     <provides>executable</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary>Overseerr viewer</summary>
+    <summary>Transmission viewer</summary>
     <description>
-Open Overseerr in a kiosk window.
+Open Transmission in a kiosk window.
     </description>
     <disclaimer>
     </disclaimer>

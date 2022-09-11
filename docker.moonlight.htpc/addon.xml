@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="docker.moonlight.htpc"
        name="HTPC (LinuxServer.io)"
-       version="1.0.32"
+       version="1.0.33"
        provider-name="Moonlight and LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />
@@ -21,6 +21,7 @@ A self hosted full stack of docker containers to build a self contained PVR syst
 - Sonarr Scanner by uilton-oliveira
 - Bazarr
 - OverSeerr
+- Ombi
 - Plex
 
 Combine with PlexKodiConnect and Embuary skin for a unified experience.

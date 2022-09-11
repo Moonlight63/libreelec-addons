@@ -55,13 +55,13 @@ for i in "${V_data}/configs/plex" \
 "${V_data}/downloads/transmission" \
 "${V_data}/downloads/transmission/watch"; do
 
-  if [ ! "$(ls -nd $i | awk '{print $3}')" = "$E_PUID" ]; then
+  # if [ ! "$(ls -nd $i | awk '{print $3}')" = "$E_PUID" ]; then
     echo "attempting chown ${E_PUID}/${E_PGID} on $i"
     chown -R "${E_PUID}":"${E_PGID}" "$i" 2>&1 >/dev/null
     echo "chown attempt completed, moving on"
-  else
-    echo "skipping chown, make sure the folder $i is accessible by the user ${E_PUID}:${E_PGID}"
-  fi
+  # else
+  #   echo "skipping chown, make sure the folder $i is accessible by the user ${E_PUID}:${E_PGID}"
+  # fi
 
 done
 

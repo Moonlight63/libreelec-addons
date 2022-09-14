@@ -381,3 +381,49 @@ msgstr ""
 # msgctxt "#32239"
 # msgid "Windscribe"
 # msgstr ""
+
+
+
+msgctxt "#33000"
+msgid "Services"
+msgstr ""
+
+msgctxt "#33001"
+msgid "Start Plex"
+msgstr ""
+
+msgctxt "#33002"
+msgid "Start Jellyfin"
+msgstr ""
+
+msgctxt "#33003"
+msgid "Start Sonarr"
+msgstr ""
+
+msgctxt "#33004"
+msgid "Start Radarr"
+msgstr ""
+
+msgctxt "#33005"
+msgid "Start Bazarr"
+msgstr ""
+
+msgctxt "#33006"
+msgid "Start Prowlarr"
+msgstr ""
+
+msgctxt "#33007"
+msgid "Start Overseerr"
+msgstr ""
+
+msgctxt "#33008"
+msgid "Start Ombi"
+msgstr ""
+
+msgctxt "#33009"
+msgid "Start Transmission"
+msgstr ""
+
+msgctxt "#33010"
+msgid "Start Muximux"
+msgstr ""

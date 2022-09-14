@@ -19,51 +19,100 @@ case $1 in
     echo "Creating network"
     docker network create --driver bridge htpc || true
 
-    systemctl enable "${ADDON_DIR}/system.d/docker.linuxserver.plex.service"
-    systemctl enable "${ADDON_DIR}/system.d/docker.linuxserver.jellyfin.service"
-    systemctl enable "${ADDON_DIR}/system.d/docker.linuxserver.bazarr.service"
-    systemctl enable "${ADDON_DIR}/system.d/docker.linuxserver.sonarr.service"
-    systemctl enable "${ADDON_DIR}/system.d/docker.linuxserver.radarr.service"
-    systemctl enable "${ADDON_DIR}/system.d/docker.linuxserver.prowlarr.service"
-    systemctl enable "${ADDON_DIR}/system.d/docker.linuxserver.overseerr.service"
-    systemctl enable "${ADDON_DIR}/system.d/docker.linuxserver.ombi.service"
-    systemctl enable "${ADDON_DIR}/system.d/docker.uilton.sonarrscanner.service"
-    systemctl enable "${ADDON_DIR}/system.d/docker.linuxserver.muximux.service"
 
-    if [ "$use_vpn" = "true" ]; then
-      systemctl enable "${ADDON_DIR}/system.d/docker.haugene.transmission.service"
-      systemctl enable "${ADDON_DIR}/system.d/docker.transmission.proxy.service"
-    else
-      systemctl enable "${ADDON_DIR}/system.d/docker.linuxserver.transmission.service"
+    if [ "$start_plex" = "true" ]; then
+      systemctl enable "${ADDON_DIR}/system.d/docker.linuxserver.plex.service"
     fi
-    
+    if [ "$start_jellyfin" = "true" ]; then
+      systemctl enable "${ADDON_DIR}/system.d/docker.linuxserver.jellyfin.service"
+    fi
+    if [ "$start_sonarr" = "true" ]; then
+      systemctl enable "${ADDON_DIR}/system.d/docker.linuxserver.sonarr.service"
+    fi
+    if [ "$start_radarr" = "true" ]; then
+      systemctl enable "${ADDON_DIR}/system.d/docker.linuxserver.radarr.service"
+    fi
+    if [ "$start_bazarr" = "true" ]; then
+      systemctl enable "${ADDON_DIR}/system.d/docker.linuxserver.bazarr.service"
+    fi
+    if [ "$start_prowlarr" = "true" ]; then
+      systemctl enable "${ADDON_DIR}/system.d/docker.linuxserver.prowlarr.service"
+    fi
+    if [ "$start_overseerr" = "true" ]; then
+      systemctl enable "${ADDON_DIR}/system.d/docker.linuxserver.overseerr.service"
+    fi
+    if [ "$start_ombi" = "true" ]; then
+      systemctl enable "${ADDON_DIR}/system.d/docker.linuxserver.ombi.service"
+    fi
+
+    if [ "$start_transmission" = "true" ]; then
+      if [ "$use_vpn" = "true" ]; then
+        systemctl enable "${ADDON_DIR}/system.d/docker.haugene.transmission.service"
+        systemctl enable "${ADDON_DIR}/system.d/docker.transmission.proxy.service"
+      else
+        systemctl enable "${ADDON_DIR}/system.d/docker.linuxserver.transmission.service"
+      fi
+    fi
+
+    if [ "$start_muximux" = "true" ]; then
+      systemctl enable "${ADDON_DIR}/system.d/docker.linuxserver.muximux.service"
+    fi
+
+    systemctl enable "${ADDON_DIR}/system.d/docker.uilton.sonarrscanner.service"
+
+
     chmod +x "${ADDON_DIR}/bin"/*
 
-    systemctl start "docker.linuxserver.plex.service"
-    systemctl start "docker.linuxserver.jellyfin.service"
-    systemctl start "docker.linuxserver.bazarr.service"
-    systemctl start "docker.linuxserver.sonarr.service"
-    systemctl start "docker.linuxserver.radarr.service"
-    systemctl start "docker.linuxserver.prowlarr.service"
-    systemctl start "docker.linuxserver.overseerr.service"
-    systemctl start "docker.linuxserver.ombi.service"
-    systemctl start "docker.uilton.sonarrscanner.service"
-    systemctl start "docker.linuxserver.muximux.service"
 
-    if [ "$use_vpn" = "true" ]; then
-      systemctl start "docker.haugene.transmission.service"
-      systemctl start "docker.transmission.proxy.service"
-    else
-      systemctl start "docker.linuxserver.transmission.service"
+    if [ "$start_plex" = "true" ]; then
+      systemctl start "docker.linuxserver.plex.service"
     fi
+    if [ "$start_jellyfin" = "true" ]; then
+      systemctl start "docker.linuxserver.jellyfin.service"
+    fi
+    if [ "$start_sonarr" = "true" ]; then
+      systemctl start "docker.linuxserver.sonarr.service"
+    fi
+    if [ "$start_radarr" = "true" ]; then
+      systemctl start "docker.linuxserver.radarr.service"
+    fi
+    if [ "$start_bazarr" = "true" ]; then
+      systemctl start "docker.linuxserver.bazarr.service"
+    fi
+    if [ "$start_prowlarr" = "true" ]; then
+      systemctl start "docker.linuxserver.prowlarr.service"
+    fi
+    if [ "$start_overseerr" = "true" ]; then
+      systemctl start "docker.linuxserver.overseerr.service"
+    fi
+    if [ "$start_ombi" = "true" ]; then
+      systemctl start "docker.linuxserver.ombi.service"
+    fi
+
+    if [ "$start_transmission" = "true" ]; then
+      if [ "$use_vpn" = "true" ]; then
+        systemctl start "docker.haugene.transmission.service"
+        systemctl start "docker.transmission.proxy.service"
+      else
+        systemctl start "docker.linuxserver.transmission.service"
+      fi
+    fi
+
+    if [ "$start_muximux" = "true" ]; then
+      systemctl start "docker.linuxserver.muximux.service"
+    fi
+
+    systemctl start "docker.uilton.sonarrscanner.service"
+
+    
 
     ;;
   'stop')
     systemctl stop "docker.linuxserver.plex.service"
     systemctl stop "docker.linuxserver.jellyfin.service"
-    systemctl stop "docker.linuxserver.bazarr.service"
     systemctl stop "docker.linuxserver.sonarr.service"
     systemctl stop "docker.linuxserver.radarr.service"
+    systemctl stop "docker.linuxserver.bazarr.service"
     systemctl stop "docker.linuxserver.prowlarr.service"
     systemctl stop "docker.linuxserver.overseerr.service"
     systemctl stop "docker.linuxserver.ombi.service"
@@ -94,23 +143,46 @@ case $1 in
     docker network rm htpc
     ;;
   'reload')
-    systemctl restart "docker.linuxserver.plex.service"
-    systemctl restart "docker.linuxserver.jellyfin.service"
-    systemctl restart "docker.linuxserver.bazarr.service"
-    systemctl restart "docker.linuxserver.sonarr.service"
-    systemctl restart "docker.linuxserver.radarr.service"
-    systemctl restart "docker.linuxserver.prowlarr.service"
-    systemctl restart "docker.linuxserver.overseerr.service"
-    systemctl restart "docker.linuxserver.ombi.service"
-    systemctl restart "docker.uilton.sonarrscanner.service"
-    systemctl restart "docker.linuxserver.muximux.service"
 
-    if [ "$use_vpn" = "true" ]; then
-      systemctl restart "docker.haugene.transmission.service"
-      systemctl restart "docker.transmission.proxy.service"
-    else
-      systemctl restart "docker.linuxserver.transmission.service"
+    if [ "$start_plex" = "true" ]; then
+      systemctl restart "docker.linuxserver.plex.service"
     fi
+    if [ "$start_jellyfin" = "true" ]; then
+      systemctl restart "docker.linuxserver.jellyfin.service"
+    fi
+    if [ "$start_sonarr" = "true" ]; then
+      systemctl restart "docker.linuxserver.sonarr.service"
+    fi
+    if [ "$start_radarr" = "true" ]; then
+      systemctl restart "docker.linuxserver.radarr.service"
+    fi
+    if [ "$start_bazarr" = "true" ]; then
+      systemctl restart "docker.linuxserver.bazarr.service"
+    fi
+    if [ "$start_prowlarr" = "true" ]; then
+      systemctl restart "docker.linuxserver.prowlarr.service"
+    fi
+    if [ "$start_overseerr" = "true" ]; then
+      systemctl restart "docker.linuxserver.overseerr.service"
+    fi
+    if [ "$start_ombi" = "true" ]; then
+      systemctl restart "docker.linuxserver.ombi.service"
+    fi
+
+    if [ "$start_transmission" = "true" ]; then
+      if [ "$use_vpn" = "true" ]; then
+        systemctl restart "docker.haugene.transmission.service"
+        systemctl restart "docker.transmission.proxy.service"
+      else
+        systemctl restart "docker.linuxserver.transmission.service"
+      fi
+    fi
+
+    if [ "$start_muximux" = "true" ]; then
+      systemctl restart "docker.linuxserver.muximux.service"
+    fi
+
+    systemctl restart "docker.uilton.sonarrscanner.service"
 
     ;;
   *)

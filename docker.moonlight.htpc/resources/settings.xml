@@ -34,4 +34,17 @@
       <setting label="32016" type="bool" id="default_tcp" default="true"/>
       <setting label="32017" type="number" id="alternative_tcp_port" visible="!eq(-1,true)" default="443"/>
    </category>
+   <category label="33000">
+      <!-- <setting label="32005" type="labelenum" id="vpn_provider" visible="eq(-7,)" enable="!eq(-1,true)" lvalues="32201|32202|32203|32204|32205|32206|32207|32208|32209|32210|32211|32212|32213|32214|32215|32216|32217|32218|32219|32220|32221|32222|32223|32224|32225|32226|32227|32228|32229|32230|32231|32232|32233|32234|32235|32236|32237|32238|32239"/> -->
+      <setting label="33001" type="bool" id="start_plex" default="false"/>
+      <setting label="33002" type="bool" id="start_jellyfin" default="false"/>
+      <setting label="33003" type="bool" id="start_sonarr" default="true"/>
+      <setting label="33004" type="bool" id="start_radarr" default="true"/>
+      <setting label="33005" type="bool" id="start_bazarr" default="true"/>
+      <setting label="33006" type="bool" id="start_prowlarr" default="true"/>
+      <setting label="33007" type="bool" id="start_overseerr" default="false"/>
+      <setting label="33008" type="bool" id="start_ombi" default="true"/>
+      <setting label="33009" type="bool" id="start_transmission" default="true"/>
+      <setting label="33010" type="bool" id="start_muximux" default="false"/>
+   </category>
 </settings>

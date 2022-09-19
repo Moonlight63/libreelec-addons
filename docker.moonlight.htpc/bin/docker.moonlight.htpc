@@ -103,15 +103,17 @@ case $1 in
       fi
     fi
 
-    if [ "$start_qbit" = "true" ]; then
-      systemctl start "docker.guillaumedsde.qbittorrent.service"
-      systemctl start "docker.drapersniper.qbitrr.service"
-    fi
-
     if [ "$start_muximux" = "true" ]; then
       systemctl start "docker.linuxserver.muximux.service"
     fi
 
+    if [ "$start_qbit" = "true" ]; then
+      systemctl start "docker.guillaumedsde.qbittorrent.service"
+      sleep 20
+      systemctl start "docker.drapersniper.qbitrr.service"
+    fi
+
+    sleep 10
     systemctl start "docker.uilton.sonarrscanner.service"
 
     
@@ -194,15 +196,18 @@ case $1 in
       fi
     fi
 
-    if [ "$start_qbit" = "true" ]; then
-      systemctl restart "docker.guillaumedsde.qbittorrent.service"
-      systemctl restart "docker.drapersniper.qbitrr.service"
-    fi
-
     if [ "$start_muximux" = "true" ]; then
       systemctl restart "docker.linuxserver.muximux.service"
     fi
 
+
+    if [ "$start_qbit" = "true" ]; then
+      systemctl restart "docker.guillaumedsde.qbittorrent.service"
+      sleep 20
+      systemctl restart "docker.drapersniper.qbitrr.service"
+    fi
+
+    sleep 10
     systemctl restart "docker.uilton.sonarrscanner.service"
 
     ;;

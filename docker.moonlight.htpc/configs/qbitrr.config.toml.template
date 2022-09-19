@@ -90,7 +90,7 @@ ArrErrorCodesToBlocklist = ["Not an upgrade for existing episode file(s)", "Unab
 # All these settings depends on SearchMissing being True and access to the Servarr database file.
 
 # Should search for Missing files?
-SearchMissing = true
+SearchMissing = false
 
 # Should search for specials episodes? (Season 00)
 AlsoSearchSpecials = false

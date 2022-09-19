@@ -2,7 +2,7 @@
 <addons>
 <addon id="docker.moonlight.htpc"
        name="HTPC (LinuxServer.io)"
-       version="1.0.40"
+       version="1.0.41"
        provider-name="Moonlight and LinuxServer.io">
   <requires>
     <import addon="service.system.docker" version="0.0.0" />

@@ -26,15 +26,12 @@ RADARRKEY=$(cat "${V_data}/configs/radarr/config.xml" | tr -d "\t\n\r" | sed -e 
 chmod +x ${ADDON_DIR}/bin/jq
 
 USEOMBI=false
-OMBIKEY=false
+OMBIKEY="false"
 if [ -f "${V_data}/configs/ombi/OmbiSettings.db" ]; then
   OmbiSettings=$(sqlite3 ${V_data}/configs/ombi/OmbiSettings.db "SELECT Content FROM GlobalSettings WHERE Id=1")
   OMBIKEY=$(echo $OmbiSettings | ${ADDON_DIR}/bin/jq '.ApiKey')
   USEOMBI=true
 fi
-
-
-curl --location --request POST 'http://ombi:3579/api/v1/Job/arrAvailability' --header 'ApiKey: <OMBI API>' --header 'Content-Length: 0'
 
 
 # if [ ! -d "${V_data}/configs/scanner" ]; then
@@ -73,10 +70,19 @@ curl --location --request POST 'http://ombi:3579/api/v1/Job/arrAvailability' --h
 # }
 # EOF
 
-template="$(cat ${ADDON_DIR}/configs/qbitrr.config.toml.template)"
-template=$(sed 's/\([^\\]\)"/\1\\"/g; s/^"/\\"/g' <<< "$template")
+# template="$(cat ${ADDON_DIR}/configs/qbitrr.config.toml.template)"
+# template=$("$template" | sed 's/\([^\\]\)"/\1\\"/g; s/^"/\\"/g')
+template=$(cat ${ADDON_DIR}/configs/qbitrr.config.toml.template | sed 's/\([^\\]\)"/\1\\"/g; s/^"/\\"/g')
+
+mkdir -p ${V_data}/configs/qbitrr/qBitManager/
+[ -f ${V_data}/configs/qbitrr/qBitManager/config.toml ] && rm -f ${V_data}/configs/qbitrr/qBitManager/config.toml
+
+# output=$(eval "echo \"${template}\""
+
+# echo "$output" >> ${V_data}/configs/qbitrr/qBitManager/config.toml
 
 eval "echo \"${template}\"" >> ${V_data}/configs/qbitrr/qBitManager/config.toml
+# eval "echo \"$(cat ${ADDON_DIR}/configs/qbitrr.config.toml.template | sed 's/\([^\\]\)"/\1\\"/g; s/^"/\\"/g')\"" >> ${V_data}/configs/qbitrr/qBitManager/config.toml
 
 docker run --name="$name" \
       -e PUID="$E_PUID" \

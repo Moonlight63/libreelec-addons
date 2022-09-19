@@ -43,7 +43,7 @@ FFprobeAutoUpdate = true
 Disabled = false
 
 # Qbit WebUI Port - Can be found in Options > Web UI (called "IP Address")
-Host = "qbittorrent"
+Host = "http://qbittorrent"
 
 # Qbit WebUI Port - Can be found in Options > Web UI (called "Port" on top right corner of the window)
 Port = 8080
@@ -60,7 +60,7 @@ Password = "adminadmin"
 Managed = true
 
 # The URL used to access Servarr interface (if you use a domain enter the domain without a port)
-URI = "sonarr"
+URI = "http://sonarr:8989"
 
 # The Servarr API Key, Can be found it Settings > General > Security
 APIKey = "$SONARRKEY"
@@ -143,7 +143,7 @@ SearchOmbiRequests = $USEOMBI
 OmbiURI = "http://ombi:3579"
 
 # Ombi's API Key
-OmbiAPIKey = "$OMBIKEY"
+OmbiAPIKey = $OMBIKEY
 
 # Only process approved requests
 ApprovedOnly = true
@@ -230,7 +230,7 @@ RemoveTrackerWithMessage = ["skipping tracker announce (unreachable)", "No such 
 Managed = true
 
 # The URL used to access Servarr interface (if you use a domain enter the domain without a port)
-URI = "radarr"
+URI = "http://radarr:7878"
 
 # The Servarr API Key, Can be found it Settings > General > Security
 APIKey = "$RADARRKEY"
@@ -310,7 +310,7 @@ SearchOmbiRequests = $USEOMBI
 OmbiURI = "http://ombi:3579"
 
 # Ombi's API Key
-OmbiAPIKey = "$OMBIKEY"
+OmbiAPIKey = $OMBIKEY
 
 # Only process approved requests
 ApprovedOnly = true

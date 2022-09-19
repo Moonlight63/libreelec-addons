@@ -43,7 +43,7 @@ FFprobeAutoUpdate = true
 Disabled = false
 
 # Qbit WebUI Port - Can be found in Options > Web UI (called "IP Address")
-Host = "qbittorrent"
+Host = "http://qbittorrent"
 
 # Qbit WebUI Port - Can be found in Options > Web UI (called "Port" on top right corner of the window)
 Port = 8080
@@ -66,7 +66,7 @@ URI = "http://sonarr:8989"
 APIKey = "$SONARRKEY"
 
 # Category applied by Servarr to torrents in qBitTorrent, can be found in Settings > Download Clients > qBit > Category
-Category = "sonarr-tv"
+Category = "tv-sonarr"
 
 # Toggle whether to send a query to Servarr to search any failed torrents
 ReSearch = true

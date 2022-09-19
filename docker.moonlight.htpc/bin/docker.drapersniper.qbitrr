@@ -84,7 +84,7 @@ mkdir -p ${V_data}/configs/qbitrr/qBitManager/
 eval "echo \"${template}\"" >> ${V_data}/configs/qbitrr/qBitManager/config.toml
 # eval "echo \"$(cat ${ADDON_DIR}/configs/qbitrr.config.toml.template | sed 's/\([^\\]\)"/\1\\"/g; s/^"/\\"/g')\"" >> ${V_data}/configs/qbitrr/qBitManager/config.toml
 
-docker run --name="$name" \
+docker run --cap-add=NET_ADMIN --name="$name" \
       -e PUID="$E_PUID" \
       -e PGID="$E_PGID" \
       -v "${V_data}/configs/qbitrr":/config/.config/ \

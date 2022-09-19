@@ -33,6 +33,7 @@ docker run --cap-add=NET_ADMIN --name="$name" \
            -e LAN=192.168.0.0/16 \
            -v "${V_data}/downloads/qbittorrent":/downloads \
            -v "${V_data}/configs/qbittorrent":/config \
+           -v "${ADDON_DIR}/configs/vuetorrent":/webui \
            -v /etc/localtime:/etc/localtime:ro \
            -p 8080:8080 \
            --net=htpc \

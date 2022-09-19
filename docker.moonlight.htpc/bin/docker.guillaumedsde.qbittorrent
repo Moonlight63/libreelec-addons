@@ -1,0 +1,41 @@
+#!/bin/sh
+
+. /etc/profile
+oe_setup_addon docker.moonlight.htpc
+# . $ADDON_DIR/bin/docker.htpc.setup
+
+name="qbittorrent"
+
+DOCKERIMAGE="guillaumedsde/alpine-qbittorrent-openvpn"
+
+
+docker rm "$name" 2>/dev/null
+docker pull "$DOCKERIMAGE":latest
+docker rmi $(docker images | grep "$DOCKERIMAGE" | grep '<none>' | sed 's/\s\+/\t/g' | cut -f3) 2> /dev/null
+
+
+# -e LOCAL_NETWORK=192.168.0.0/16 \
+# -v "${ADDON_DIR}/configs/purevpn":/etc/openvpn/purevpn \
+# -v "${V_data}/configs/transmission":/data/transmission-home \
+
+        #    -e OPENVPN_OPTS="--inactive 3600 --ping 10 --ping-exit 60" \
+# Added tcp for PIA because UDP has known issues. Also changed DNS servers.
+docker run --cap-add=NET_ADMIN --name="$name" \
+           -e PUID="$E_PUID" \
+           -e PGID="$E_PGID" \
+           -e TZ="$TIMEZONE" \
+           -e OPENVPN_PROVIDER=$vpn_provider \
+           -e OPENVPN_CONFIG=$vpn_config \
+           -e OPENVPN_USERNAME=$vpn_username \
+           -e OPENVPN_PASSWORD=$vpn_password \
+           -e PIA_OPENVPN_CONFIG_BUNDLE=openvpn-tcp \
+           -e DNS=1.1.1.1 \
+           -e LAN=192.168.0.0/16 \
+           -v "${V_data}/downloads/qbittorrent":/downloads \
+           -v "${V_data}/configs/qbittorrent":/config \
+           -v /etc/localtime:/etc/localtime:ro \
+           -p 8080:8080 \
+           --net=htpc \
+           --dns 1.1.1.1 \
+           --dns 8.8.8.8 \
+           "$DOCKERIMAGE":latest

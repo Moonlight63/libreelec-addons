@@ -427,3 +427,7 @@ msgstr ""
 msgctxt "#33010"
 msgid "Start Muximux"
 msgstr ""
+
+msgctxt "#33011"
+msgid "Start QBittorrent"
+msgstr ""

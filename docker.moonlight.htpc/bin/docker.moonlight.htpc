@@ -54,6 +54,10 @@ case $1 in
       fi
     fi
 
+    if [ "$start_qbit" = "true" ]; then
+      systemctl enable "${ADDON_DIR}/system.d/docker.guillaumedsde.qbittorrent.service"
+    fi
+
     if [ "$start_muximux" = "true" ]; then
       systemctl enable "${ADDON_DIR}/system.d/docker.linuxserver.muximux.service"
     fi
@@ -98,6 +102,10 @@ case $1 in
       fi
     fi
 
+    if [ "$start_qbit" = "true" ]; then
+      systemctl start "docker.guillaumedsde.qbittorrent.service"
+    fi
+
     if [ "$start_muximux" = "true" ]; then
       systemctl start "docker.linuxserver.muximux.service"
     fi
@@ -123,6 +131,8 @@ case $1 in
     systemctl stop "docker.transmission.proxy.service"
     systemctl stop "docker.linuxserver.transmission.service"
 
+    systemctl stop "docker.guillaumedsde.qbittorrent.service"
+
 
     systemctl disable "docker.linuxserver.plex.service"
     systemctl disable "docker.linuxserver.jellyfin.service"
@@ -138,6 +148,8 @@ case $1 in
     systemctl disable "docker.haugene.transmission.service"
     systemctl disable "docker.transmission.proxy.service"
     systemctl disable "docker.linuxserver.transmission.service"
+
+    systemctl disable "docker.guillaumedsde.qbittorrent.service"
 
     echo "Removing Network"
     docker network rm htpc
@@ -176,6 +188,10 @@ case $1 in
       else
         systemctl restart "docker.linuxserver.transmission.service"
       fi
+    fi
+
+    if [ "$start_qbit" = "true" ]; then
+      systemctl restart "docker.guillaumedsde.qbittorrent.service"
     fi
 
     if [ "$start_muximux" = "true" ]; then

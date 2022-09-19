@@ -27,6 +27,7 @@ mkdir -p "${V_data}/configs/plex" \
 "${V_data}/configs/ombi" \
 "${V_data}/configs/muximux" \
 "${V_data}/configs/transmission" \
+"${V_data}/configs/qbittorrent" \
 "${V_data}/media/tvshows" \
 "${V_data}/media/movies" \
 "${V_data}/media/photos" \
@@ -34,6 +35,7 @@ mkdir -p "${V_data}/configs/plex" \
 "${V_data}/media/music" \
 "${V_data}/downloads/plextranscode" \
 "${V_data}/downloads/transmission" \
+"${V_data}/downloads/qbittorrent" \
 "${V_data}/downloads/transmission/watch"
 
 for i in "${V_data}/configs/plex" \
@@ -46,6 +48,7 @@ for i in "${V_data}/configs/plex" \
 "${V_data}/configs/ombi" \
 "${V_data}/configs/muximux" \
 "${V_data}/configs/transmission" \
+"${V_data}/configs/qbittorrent" \
 "${V_data}/media/tvshows" \
 "${V_data}/media/movies" \
 "${V_data}/media/photos" \
@@ -53,6 +56,7 @@ for i in "${V_data}/configs/plex" \
 "${V_data}/media/music" \
 "${V_data}/downloads/plextranscode" \
 "${V_data}/downloads/transmission" \
+"${V_data}/downloads/qbittorrent" \
 "${V_data}/downloads/transmission/watch"; do
 
   # if [ ! "$(ls -nd $i | awk '{print $3}')" = "$E_PUID" ]; then

@@ -26,7 +26,7 @@ docker run --name="$name" \
            -e TZ="$TIMEZONE" \
            -v "${V_data}/configs/radarr":/config \
            -v "${V_data}/media/movies":/movies \
-           -v "${V_data}/downloads/transmission":/downloads \
+           -v "${V_data}/downloads":/downloads \
            --net=htpc \
            -p 7878:7878 \
            "$DOCKERIMAGE":latest

@@ -43,7 +43,7 @@ FFprobeAutoUpdate = true
 Disabled = false
 
 # Qbit WebUI Port - Can be found in Options > Web UI (called "IP Address")
-Host = "http://qbittorrent"
+Host = "qbittorrent"
 
 # Qbit WebUI Port - Can be found in Options > Web UI (called "Port" on top right corner of the window)
 Port = 8080
@@ -75,10 +75,10 @@ ReSearch = true
 importMode = "Move"
 
 # Timer to call RSSSync (In minutes) - Set to 0 to disable
-RssSyncTimer = 0
+RssSyncTimer = 60
 
 # Timer to call RefreshDownloads tp update the queue. (In minutes) - Set to 0 to disable
-RefreshDownloadsTimer = 0
+RefreshDownloadsTimer = 60
 
 # Error messages shown my the Arr instance which should be considered failures.
 # This entry should be a list, leave it empty if you want to disable this error handling.

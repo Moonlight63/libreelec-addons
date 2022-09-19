@@ -146,7 +146,7 @@ OmbiURI = "http://ombi:3579"
 OmbiAPIKey = $OMBIKEY
 
 # Only process approved requests
-ApprovedOnly = false
+ApprovedOnly = true
 
 
 [Sonarr-TV.EntrySearch.Overseerr]

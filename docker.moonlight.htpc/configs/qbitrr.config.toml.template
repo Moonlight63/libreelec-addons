@@ -34,7 +34,7 @@ PingURLS = ["one.one.one.one", "dns.google.com"]
 # Ensure that you add the binary for your platform into ~/.config/qBitManager i.e "/config/.config/qBitManager/ffprobe.exe"
 # If no `ffprobe` binary is found in the folder above all ffprobe functionality will be disabled.
 # By default this will always be on even if config does not have these key - to disable you need to explicitly set it to `False`
-FFprobeAutoUpdate = true
+FFprobeAutoUpdate = false
 
 [QBit]
 # If this is enable qBitrr can run in a headless mode where it will only process searches.
@@ -187,13 +187,13 @@ IgnoreTorrentsYoungerThan = 3000 #180
 
 # Maximum allowed remaining ETA for torrent completion (in seconds: 3600 = 1 Hour)
 # Note that if you set the MaximumETA on a tracker basis that value is favoured over this value
-MaximumETA = 2592000 #30 days 604800 7 days 18000 5 hours
+MaximumETA = 5184000 #2592000 30 days 604800 7 days 18000 5 hours
 
 # Do not delete torrents with higher completion percentage than this setting (0.5 = 50%, 1.0 = 100%)
 MaximumDeletablePercentage = 0.85
 
 # Ignore slow torrents.
-DoNotRemoveSlow = false
+DoNotRemoveSlow = true
 
 Trackers = []
 

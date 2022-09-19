@@ -56,6 +56,7 @@ case $1 in
 
     if [ "$start_qbit" = "true" ]; then
       systemctl enable "${ADDON_DIR}/system.d/docker.guillaumedsde.qbittorrent.service"
+      systemctl enable "${ADDON_DIR}/system.d/docker.drapersniper.qbitrr.service"
     fi
 
     if [ "$start_muximux" = "true" ]; then
@@ -104,6 +105,7 @@ case $1 in
 
     if [ "$start_qbit" = "true" ]; then
       systemctl start "docker.guillaumedsde.qbittorrent.service"
+      systemctl start "docker.drapersniper.qbitrr.service"
     fi
 
     if [ "$start_muximux" = "true" ]; then
@@ -132,6 +134,7 @@ case $1 in
     systemctl stop "docker.linuxserver.transmission.service"
 
     systemctl stop "docker.guillaumedsde.qbittorrent.service"
+    systemctl stop "docker.drapersniper.qbitrr.service"
 
 
     systemctl disable "docker.linuxserver.plex.service"
@@ -150,6 +153,7 @@ case $1 in
     systemctl disable "docker.linuxserver.transmission.service"
 
     systemctl disable "docker.guillaumedsde.qbittorrent.service"
+    systemctl disable "docker.drapersniper.qbitrr.service"
 
     echo "Removing Network"
     docker network rm htpc
@@ -192,6 +196,7 @@ case $1 in
 
     if [ "$start_qbit" = "true" ]; then
       systemctl restart "docker.guillaumedsde.qbittorrent.service"
+      systemctl restart "docker.drapersniper.qbitrr.service"
     fi
 
     if [ "$start_muximux" = "true" ]; then

@@ -137,7 +137,7 @@ PrioritizeTodaysReleases = true
 
 [Sonarr-TV.EntrySearch.Ombi]
 # Search Ombi for pending requests (Will only work if 'SearchMissing' is enabled.)
-SearchOmbiRequests = $USEOMBI
+SearchOmbiRequests = false #$USEOMBI
 
 # Ombi URI (Note that this has to be the instance of Ombi which manage the Arr instance request (If you have multiple Ombi instances)
 OmbiURI = "http://ombi:3579"
@@ -304,7 +304,7 @@ SearchAgainOnSearchCompletion = false
 
 [Radarr-1080.EntrySearch.Ombi]
 # Search Ombi for pending requests (Will only work if 'SearchMissing' is enabled.)
-SearchOmbiRequests = $USEOMBI
+SearchOmbiRequests = false #$USEOMBI
 
 # Ombi URI (Note that this has to be the instance of Ombi which manage the Arr instance request (If you have multiple Ombi instances)
 OmbiURI = "http://ombi:3579"

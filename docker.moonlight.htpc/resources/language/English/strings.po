@@ -431,3 +431,64 @@ msgstr ""
 msgctxt "#33011"
 msgid "Start QBittorrent"
 msgstr ""
+
+
+msgctxt "#34000"
+msgid "Qbitrr Settings"
+msgstr ""
+
+msgctxt "#34001"
+msgid "Search Missing"
+msgstr ""
+
+msgctxt "#34002"
+msgid "Search By Series"
+msgstr ""
+
+msgctxt "#34003"
+msgid "Prioritize Todays Releases"
+msgstr ""
+
+msgctxt "#34004"
+msgid "Auto Delete"
+msgstr ""
+
+msgctxt "#34005"
+msgid "Do Upgrade Search"
+msgstr ""
+
+msgctxt "#34006"
+msgid "Quality Unmet Search"
+msgstr ""
+
+msgctxt "#34007"
+msgid "Search Again On Search Completion"
+msgstr ""
+
+msgctxt "#34008"
+msgid "Search Ombi Requests"
+msgstr ""
+
+msgctxt "#34009"
+msgid "Search Overseerr Requests"
+msgstr ""
+
+msgctxt "#34010"
+msgid "Rss Sync Timer (minutes)"
+msgstr ""
+
+msgctxt "#34011"
+msgid "Refresh Downloads Timer (minutes)"
+msgstr ""
+
+msgctxt "#34012"
+msgid "Search Requests Every (seconds)"
+msgstr ""
+
+msgctxt "#34013"
+msgid "Ignore Torrents Younger Than (seconds)"
+msgstr ""
+
+msgctxt "#34014"
+msgid "Maximum Eta (seconds)"
+msgstr ""

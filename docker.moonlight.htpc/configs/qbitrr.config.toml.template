@@ -75,10 +75,10 @@ ReSearch = true
 importMode = "Move"
 
 # Timer to call RSSSync (In minutes) - Set to 0 to disable
-RssSyncTimer = 60
+RssSyncTimer = $qbitrr_RssSyncTimer
 
 # Timer to call RefreshDownloads tp update the queue. (In minutes) - Set to 0 to disable
-RefreshDownloadsTimer = 60
+RefreshDownloadsTimer = $qbitrr_RefreshDownloadsTimer
 
 # Error messages shown my the Arr instance which should be considered failures.
 # This entry should be a list, leave it empty if you want to disable this error handling.
@@ -90,7 +90,7 @@ ArrErrorCodesToBlocklist = ["Not an upgrade for existing episode file(s)", "Unab
 # All these settings depends on SearchMissing being True and access to the Servarr database file.
 
 # Should search for Missing files?
-SearchMissing = false
+SearchMissing = $qbitrr_SearchMissing
 
 # Should search for specials episodes? (Season 00)
 AlsoSearchSpecials = false
@@ -117,22 +117,22 @@ LastYear = 1980
 SearchInReverse = false
 
 # Delay between request searches in seconds
-SearchRequestsEvery = 1800
+SearchRequestsEvery = $qbitrr_SearchRequestsEvery
 
 # Search movies which already have a file in the database in hopes of finding a better quality version.
-DoUpgradeSearch = true
+DoUpgradeSearch = $qbitrr_DoUpgradeSearch
 
 # Do a quality unmet search for existing entries.
-QualityUnmetSearch = false
+QualityUnmetSearch = $qbitrr_QualityUnmetSearch
 
 # Once you have search all files on your specified year range restart the loop and search again.
-SearchAgainOnSearchCompletion = true
+SearchAgainOnSearchCompletion = $qbitrr_SearchAgainOnSearchCompletion
 
 # Search by series instead of by episode
-SearchBySeries = true
+SearchBySeries = $qbitrr_SearchBySeries
 
 # Prioritize Today's releases (Similar effect as RSS Sync, where it searches today's release episodes first, only works on Sonarr).
-PrioritizeTodaysReleases = true
+PrioritizeTodaysReleases = $qbitrr_PrioritizeTodaysReleases
 
 
 [Sonarr-TV.EntrySearch.Ombi]
@@ -180,14 +180,14 @@ FileNameExclusionRegex = ["\\bncop\\\\d+?\\b", "\\bnced\\\\d+?\\b", "\\bsample\\
 FileExtensionAllowlist = [".mp4", ".mkv", ".sub", ".ass", ".srt", ".!qB", ".parts"]
 
 # Auto delete files that can't be playable (i.e .exe, .png)
-AutoDelete = false
+AutoDelete = $qbitrr_AutoDelete
 
 # Ignore Torrents which are younger than this value (in seconds: 600 = 10 Minutes)
-IgnoreTorrentsYoungerThan = 6000 #180
+IgnoreTorrentsYoungerThan = $qbitrr_IgnoreTorrentsYoungerThan #180
 
 # Maximum allowed remaining ETA for torrent completion (in seconds: 3600 = 1 Hour)
 # Note that if you set the MaximumETA on a tracker basis that value is favoured over this value
-MaximumETA = 5184000 #2592000 30 days 604800 7 days 18000 5 hours
+MaximumETA = $qbitrr_MaximumETA #2592000 30 days 604800 7 days 18000 5 hours
 
 # Do not delete torrents with higher completion percentage than this setting (0.5 = 50%, 1.0 = 100%)
 MaximumDeletablePercentage = 0.85
@@ -260,7 +260,7 @@ ArrErrorCodesToBlocklist = ["Not an upgrade for existing movie file(s)", "Unable
 # All these settings depends on SearchMissing being True and access to the Servarr database file.
 
 # Should search for Missing files?
-SearchMissing = true
+SearchMissing = $qbitrr_SearchMissing
 
 # Should search for specials episodes? (Season 00)
 AlsoSearchSpecials = false
@@ -290,16 +290,16 @@ LastYear = 1970
 SearchInReverse = false
 
 # Delay between request searches in seconds
-SearchRequestsEvery = 1800
+SearchRequestsEvery = $qbitrr_SearchRequestsEvery
 
 # Search movies which already have a file in the database in hopes of finding a better quality version.
-DoUpgradeSearch = false
+DoUpgradeSearch = $qbitrr_DoUpgradeSearch
 
 # Do a quality unmet search for existing entries.
-QualityUnmetSearch = false
+QualityUnmetSearch = $qbitrr_QualityUnmetSearch
 
 # Once you have search all files on your specified year range restart the loop and search again.
-SearchAgainOnSearchCompletion = false
+SearchAgainOnSearchCompletion = $qbitrr_SearchAgainOnSearchCompletion
 
 
 [Radarr-1080.EntrySearch.Ombi]
@@ -347,15 +347,15 @@ FileNameExclusionRegex = ["\\bncop\\\\d+?\\b", "\\bnced\\\\d+?\\b", "\\bsample\\
 FileExtensionAllowlist = [".mp4", ".mkv", ".sub", ".ass", ".srt", ".!qB", ".parts"]
 
 # Auto delete files that can't be playable (i.e .exe, .png)
-AutoDelete = false
+AutoDelete = $qbitrr_AutoDelete
 
 # Ignore Torrents which are younger than this value (in seconds: 600 = 10 Minutes)
-IgnoreTorrentsYoungerThan = 6000
+IgnoreTorrentsYoungerThan = $qbitrr_IgnoreTorrentsYoungerThan
 
 # Maximum allowed remaining ETA for torrent completion (in seconds: 3600 = 1 Hour)
 # Note that if you set the MaximumETA on a tracker basis that value is favoured over this value
 #18000
-MaximumETA = 604800
+MaximumETA = $qbitrr_MaximumETA
 
 # Do not delete torrents with higher completion percentage than this setting (0.5 = 50%, 1.0 = 100%)
 MaximumDeletablePercentage = 0.85

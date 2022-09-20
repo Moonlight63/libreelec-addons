@@ -48,4 +48,21 @@
       <setting label="33011" type="bool" id="start_qbit" default="true"/>
       <setting label="33010" type="bool" id="start_muximux" default="false"/>
    </category>
+   <category label="34000">
+      <!-- <setting label="32005" type="labelenum" id="vpn_provider" visible="eq(-7,)" enable="!eq(-1,true)" lvalues="32201|32202|32203|32204|32205|32206|32207|32208|32209|32210|32211|32212|32213|32214|32215|32216|32217|32218|32219|32220|32221|32222|32223|32224|32225|32226|32227|32228|32229|32230|32231|32232|32233|32234|32235|32236|32237|32238|32239"/> -->
+      <setting label="34001" type="bool" id="qbitrr_SearchMissing" default="true"/>
+      <setting label="34002" type="bool" id="qbitrr_SearchBySeries" default="true"/>
+      <setting label="34003" type="bool" id="qbitrr_PrioritizeTodaysReleases" default="true"/>
+      <setting label="34004" type="bool" id="qbitrr_AutoDelete" default="false"/>
+      <setting label="34005" type="bool" id="qbitrr_DoUpgradeSearch" default="false"/>
+      <setting label="34006" type="bool" id="qbitrr_QualityUnmetSearch" default="false"/>
+      <setting label="34007" type="bool" id="qbitrr_SearchAgainOnSearchCompletion" default="false"/>
+      <setting label="34008" type="bool" id="qbitrr_SearchOmbiRequests" default="false"/>
+      <setting label="34009" type="bool" id="qbitrr_SearchOverseerrRequests" default="false"/>
+      <setting label="34010" type="number" id="qbitrr_RssSyncTimer" default="60"/>
+      <setting label="34011" type="number" id="qbitrr_RefreshDownloadsTimer" default="60"/>
+      <setting label="34012" type="number" id="qbitrr_SearchRequestsEvery" default="1800"/>
+      <setting label="34013" type="number" id="qbitrr_IgnoreTorrentsYoungerThan" default="6000"/>
+      <setting label="34014" type="number" id="qbitrr_MaximumETA" default="5184000"/>
+   </category>
 </settings>

@@ -27,62 +27,29 @@ chmod +x ${ADDON_DIR}/bin/jq
 
 USEOMBI=false
 OMBIKEY="false"
-if [ -f "${V_data}/configs/ombi/OmbiSettings.db" ]; then
+
+USEOVERSEERR=false
+OVERSEERRKEY="false"
+
+if [ "$start_ombi" = "true" -a -f "${V_data}/configs/ombi/OmbiSettings.db" ]; then
   OmbiSettings=$(sqlite3 ${V_data}/configs/ombi/OmbiSettings.db "SELECT Content FROM GlobalSettings WHERE Id=1")
   OMBIKEY=$(echo $OmbiSettings | ${ADDON_DIR}/bin/jq '.ApiKey')
   USEOMBI=true
 fi
 
+if [ "$start_overseerr" = "true" -a -f "${V_data}/configs/overseerr/settings.json" ]; then
+  OVERSEERRKEY=$(cat "${V_data}/configs/overseerr/settings.json" | ${ADDON_DIR}/bin/jq '.main.apiKey')
+  USEOVERSEERR=true
+fi
 
-# if [ ! -d "${V_data}/configs/scanner" ]; then
-#   mkdir "${V_data}/configs/scanner"
-# fi
-
-# rm -rf "${V_data}/configs/scanner/*"
-
-# touch "${V_data}/configs/scanner/sonarr"
-# touch "${V_data}/configs/scanner/radarr"
-
-
-# cat << EOF > "${V_data}/configs/scanner/sonarr"
-# {
-#   "URL": "http://sonarr:8989",
-#   "Interval": 1440,
-#   "ScanOnWake": true,
-#   "ScanOnInterval": true,
-#   "ScanOnStart": true,  
-#   "ForceImport": false,
-#   "ForceImportInterval": 1,
-#   "ForceImportMode": "Copy",
-#   "APIKey": "${SONARRKEY}"
-# }
-# EOF
-
-
-# cat << EOF > "${V_data}/configs/scanner/radarr"
-# {
-#   "URL": "http://radarr:7878",
-#   "Interval": 1440,
-#   "ScanOnWake": true,
-#   "ScanOnInterval": true,
-#   "ScanOnStart": true,
-#   "APIKey": "${RADARRKEY}"
-# }
-# EOF
-
-# template="$(cat ${ADDON_DIR}/configs/qbitrr.config.toml.template)"
-# template=$("$template" | sed 's/\([^\\]\)"/\1\\"/g; s/^"/\\"/g')
 template=$(cat ${ADDON_DIR}/configs/qbitrr.config.toml.template | sed 's/\([^\\]\)"/\1\\"/g; s/^"/\\"/g')
 
 mkdir -p ${V_data}/configs/qbitrr/qBitManager/
-[ -f ${V_data}/configs/qbitrr/qBitManager/config.toml ] && rm -f ${V_data}/configs/qbitrr/qBitManager/config.toml
-
-# output=$(eval "echo \"${template}\""
-
-# echo "$output" >> ${V_data}/configs/qbitrr/qBitManager/config.toml
+[ -f ${V_data}/configs/qbitrr/qBitManager/config.toml ] && rm -f ${V_data}/configs/qbitrr/qBitManager/config.t
 
 eval "echo \"${template}\"" >> ${V_data}/configs/qbitrr/qBitManager/config.toml
-# eval "echo \"$(cat ${ADDON_DIR}/configs/qbitrr.config.toml.template | sed 's/\([^\\]\)"/\1\\"/g; s/^"/\\"/g')\"" >> ${V_data}/configs/qbitrr/qBitManager/config.toml
+
+sleep 10
 
 docker run --cap-add=NET_ADMIN --name="$name" \
       -e PUID="$E_PUID" \

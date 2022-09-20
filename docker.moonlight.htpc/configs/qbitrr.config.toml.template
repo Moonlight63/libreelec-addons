@@ -137,7 +137,7 @@ PrioritizeTodaysReleases = true
 
 [Sonarr-TV.EntrySearch.Ombi]
 # Search Ombi for pending requests (Will only work if 'SearchMissing' is enabled.)
-SearchOmbiRequests = false #$USEOMBI
+SearchOmbiRequests = $USEOMBI
 
 # Ombi URI (Note that this has to be the instance of Ombi which manage the Arr instance request (If you have multiple Ombi instances)
 OmbiURI = "http://ombi:3579"
@@ -152,13 +152,13 @@ ApprovedOnly = true
 [Sonarr-TV.EntrySearch.Overseerr]
 # Search Overseerr for pending requests (Will only work if 'SearchMissing' is enabled.)
 # If this and Ombi are both enable, Ombi will be ignored
-SearchOverseerrRequests = false
+SearchOverseerrRequests = $USEOVERSEERR
 
 # Overseerr's URI
-OverseerrURI = "http://localhost:5055"
+OverseerrURI = "http://overseerr:5055"
 
 # Overseerr's API Key
-OverseerrAPIKey = "CHANGE_ME"
+OverseerrAPIKey = $OVERSEERRKEY
 
 # Only process approved requests
 ApprovedOnly = true
@@ -304,7 +304,7 @@ SearchAgainOnSearchCompletion = false
 
 [Radarr-1080.EntrySearch.Ombi]
 # Search Ombi for pending requests (Will only work if 'SearchMissing' is enabled.)
-SearchOmbiRequests = false #$USEOMBI
+SearchOmbiRequests = $USEOMBI
 
 # Ombi URI (Note that this has to be the instance of Ombi which manage the Arr instance request (If you have multiple Ombi instances)
 OmbiURI = "http://ombi:3579"
@@ -319,13 +319,13 @@ ApprovedOnly = true
 [Radarr-1080.EntrySearch.Overseerr]
 # Search Overseerr for pending requests (Will only work if 'SearchMissing' is enabled.)
 # If this and Ombi are both enable, Ombi will be ignored
-SearchOverseerrRequests = false
+SearchOverseerrRequests = $USEOVERSEERR
 
 # Overseerr's URI
-OverseerrURI = "http://localhost:5055"
+OverseerrURI = "http://overseerr:5055"
 
 # Overseerr's API Key
-OverseerrAPIKey = "CHANGE_ME"
+OverseerrAPIKey = $OVERSEERRKEY
 
 # Only process approved requests
 ApprovedOnly = true

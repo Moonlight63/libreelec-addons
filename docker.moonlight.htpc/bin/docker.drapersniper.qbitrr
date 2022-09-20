@@ -45,7 +45,7 @@ fi
 template=$(cat ${ADDON_DIR}/configs/qbitrr.config.toml.template | sed 's/\([^\\]\)"/\1\\"/g; s/^"/\\"/g')
 
 mkdir -p ${V_data}/configs/qbitrr/qBitManager/
-[ -f ${V_data}/configs/qbitrr/qBitManager/config.toml ] && rm -f ${V_data}/configs/qbitrr/qBitManager/config.t
+[ -f ${V_data}/configs/qbitrr/qBitManager/config.toml ] && rm -f ${V_data}/configs/qbitrr/qBitManager/config.toml
 
 eval "echo \"${template}\"" >> ${V_data}/configs/qbitrr/qBitManager/config.toml
 

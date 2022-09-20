@@ -31,13 +31,13 @@ OMBIKEY="false"
 USEOVERSEERR=false
 OVERSEERRKEY="false"
 
-if [ "$start_ombi" = "true" -a -f "${V_data}/configs/ombi/OmbiSettings.db" ]; then
+if [ "$qbitrr_SearchOmbiRequests" = "true" -a "$start_ombi" = "true" -a -f "${V_data}/configs/ombi/OmbiSettings.db" ]; then
   OmbiSettings=$(sqlite3 ${V_data}/configs/ombi/OmbiSettings.db "SELECT Content FROM GlobalSettings WHERE Id=1")
   OMBIKEY=$(echo $OmbiSettings | ${ADDON_DIR}/bin/jq '.ApiKey')
   USEOMBI=true
 fi
 
-if [ "$start_overseerr" = "true" -a -f "${V_data}/configs/overseerr/settings.json" ]; then
+if [ "$qbitrr_SearchOverseerrRequests" = "true" -a "$start_overseerr" = "true" -a -f "${V_data}/configs/overseerr/settings.json" ]; then
   OVERSEERRKEY=$(cat "${V_data}/configs/overseerr/settings.json" | ${ADDON_DIR}/bin/jq '.main.apiKey')
   USEOVERSEERR=true
 fi

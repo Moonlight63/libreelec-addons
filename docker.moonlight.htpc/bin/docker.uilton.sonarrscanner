@@ -36,7 +36,7 @@ touch "${V_data}/configs/scanner/radarr"
 cat << EOF > "${V_data}/configs/scanner/sonarr"
 {
   "URL": "http://sonarr:8989",
-  "Interval": 1440,
+  "Interval": 720,
   "ScanOnWake": true,
   "ScanOnInterval": true,
   "ScanOnStart": true,  
@@ -51,7 +51,7 @@ EOF
 cat << EOF > "${V_data}/configs/scanner/radarr"
 {
   "URL": "http://radarr:7878",
-  "Interval": 1440,
+  "Interval": 720,
   "ScanOnWake": true,
   "ScanOnInterval": true,
   "ScanOnStart": true,
